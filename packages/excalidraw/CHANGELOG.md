@@ -507,7 +507,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Fixed copy to clipboard button [#8426](https://github.com/excalidraw/excalidraw/pull/8426)
 
-- Context menu does not work after after dragging on StatsDragInput [#8386](https://github.com/excalidraw/excalidraw/pull/8386)
+- Context menu does not work after dragging on StatsDragInput [#8386](https://github.com/excalidraw/excalidraw/pull/8386)
 
 - Perf regression in `getCommonBounds` [#8429](https://github.com/excalidraw/excalidraw/pull/8429)
 
