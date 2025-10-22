@@ -472,7 +472,7 @@
   },
   "publishSuccessDialog": {
     "title": "Library submitted",
-    "content": "Thank you {{authorName}}. Your library has been submitted for review. You can track the status <link>here</link>"
+    "content": "Thank you {{authorName}}. Your <link>library has been submitted for review</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Reset library",
