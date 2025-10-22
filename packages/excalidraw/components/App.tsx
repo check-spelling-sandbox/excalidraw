@@ -1852,7 +1852,7 @@ class App extends React.Component<AppProps, AppState> {
 
   private toggleOverscrollBehavior(event: React.PointerEvent) {
     // when pointer inside editor, disable overscroll behavior to prevent
-    // panning to trigger history back/forward on MacOS Chrome
+    // panning to trigger history back/forward on macOS Chrome
     document.documentElement.style.overscrollBehaviorX =
       event.type === "pointerenter" ? "none" : "auto";
   }
@@ -5271,7 +5271,7 @@ class App extends React.Component<AppProps, AppState> {
   /**
    * returns whether user is making a gesture with >= 2 fingers (points)
    * on o touch screen (not on a trackpad). Currently only relates to Darwin
-   * (iOS/iPadOS,MacOS), but may work on other devices in the future if
+   * (iOS/iPadOS,macOS), but may work on other devices in the future if
    * GestureEvent is standardized.
    */
   private isTouchScreenMultiTouchGesture = () => {

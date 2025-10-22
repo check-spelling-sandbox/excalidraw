@@ -843,7 +843,7 @@ export const actionDecreaseFontSize = register({
     return (
       event[KEYS.CTRL_OR_CMD] &&
       event.shiftKey &&
-      // KEYS.COMMA needed for MacOS
+      // KEYS.COMMA needed for macOS
       (event.key === KEYS.CHEVRON_LEFT || event.key === KEYS.COMMA)
     );
   },
@@ -863,7 +863,7 @@ export const actionIncreaseFontSize = register({
     return (
       event[KEYS.CTRL_OR_CMD] &&
       event.shiftKey &&
-      // KEYS.PERIOD needed for MacOS
+      // KEYS.PERIOD needed for macOS
       (event.key === KEYS.CHEVRON_RIGHT || event.key === KEYS.PERIOD)
     );
   },
