@@ -6961,7 +6961,7 @@ class App extends React.Component<AppProps, AppState> {
     }
 
     // since contextMenu options are potentially evaluated on each render,
-    // and an contextMenu action may depend on selection state, we must
+    // and a contextMenu action may depend on selection state, we must
     // close the contextMenu before we update the selection on pointerDown
     // (e.g. resetting selection)
     if (this.state.contextMenu) {

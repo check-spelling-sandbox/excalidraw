@@ -2171,7 +2171,7 @@ export class BindableElement {
 
         if (isTextElement(boundElement)) {
           const boundElements = bindableElement.boundElements?.slice() ?? [];
-          // check if this is the last element in the array, if not, there is an previously bound text which should be unbound
+          // check if this is the last element in the array, if not, there is a previously bound text which should be unbound
           if (
             boundElements.reverse().find((x) => x.type === "text")?.id ===
             boundElement.id

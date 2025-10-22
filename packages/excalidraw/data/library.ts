@@ -933,7 +933,7 @@ export const useHandleLibrary = (
   // can run this hook outside of an active editor instance and the library
   // update queue/loop survives editor remounts
   //
-  // This effect is still only meant to be run if host apps supply an persitence
+  // This effect is still only meant to be run if host apps supply a persitence
   // adapter. If we don't have access to it, it the update listener doesn't
   // do anything.
   useEffect(

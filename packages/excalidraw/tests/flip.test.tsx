@@ -800,7 +800,7 @@ describe("image", () => {
     expect(h.elements[0].angle).toBeCloseTo(0);
   });
 
-  it("flips an rotated image horizontally correctly", async () => {
+  it("flips a rotated image horizontally correctly", async () => {
     const originalAngle = (Math.PI / 4) as Radians;
     const expectedAngle = ((7 * Math.PI) / 4) as Radians;
     //paste image
@@ -818,7 +818,7 @@ describe("image", () => {
     expect((h.elements[0] as ExcalidrawImageElement).scale).toEqual([-1, 1]);
   });
 
-  it("flips an rotated image vertically correctly", async () => {
+  it("flips a rotated image vertically correctly", async () => {
     const originalAngle = (Math.PI / 4) as Radians;
     const expectedAngle = ((7 * Math.PI) / 4) as Radians;
     //paste image

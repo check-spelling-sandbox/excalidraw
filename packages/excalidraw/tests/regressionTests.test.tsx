@@ -984,7 +984,7 @@ describe("regression tests", () => {
       mouse.up(1000, 1000);
 
       // draw ellipse partially over rectangle.
-      // since ellipse was created after rectangle it has an higher z-index.
+      // since ellipse was created after rectangle it has a higher z-index.
       // we don't need to change background color again since change above
       // affects next drawn elements.
       UI.clickTool("ellipse");
