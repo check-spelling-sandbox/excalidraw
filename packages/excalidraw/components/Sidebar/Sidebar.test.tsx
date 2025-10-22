@@ -170,7 +170,7 @@ describe("Sidebar", () => {
 
       const node = container.querySelector("#test-sidebar-header-content");
       expect(node).not.toBe(null);
-      // make sure we don't render the default fallback header,
+      // make sure we don't render the fallback header,
       // just the custom one
       expect(queryAllByTestId(container, "sidebar-header").length).toBe(1);
     });
