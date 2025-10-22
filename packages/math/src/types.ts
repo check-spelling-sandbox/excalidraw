@@ -53,7 +53,7 @@ export type Line<P extends GlobalPoint | LocalPoint> = [p: P, q: P] & {
 };
 
 /**
- * In geometry, a line segment is a part of a straight
+ * In geometry, a line segment is the part of a straight
  * line that is bounded by two distinct end points, and
  * contains every point on the line that is between its endpoints.
  */
