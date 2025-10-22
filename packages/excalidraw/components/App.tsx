@@ -11097,7 +11097,7 @@ class App extends React.Component<AppProps, AppState> {
 
       // -----------------------------------------------------------------------
       // NOTE wheel, touchstart, touchend events must be registered outside
-      // of react because react binds them them passively (so we can't prevent
+      // of react because react binds them passively (so we can't prevent
       // default on them)
       this.interactiveCanvas.addEventListener(
         EVENT.TOUCH_START,
