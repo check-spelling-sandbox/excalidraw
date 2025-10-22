@@ -860,7 +860,7 @@ describe("repairing bindings", () => {
     };
     expect(container.boundElements).toEqual([]);
 
-    const nonExistentBinding = { type: "text", id: "non-existent" };
+    const nonExistentBinding = { type: "text", id: "nonexistent" };
     // @ts-ignore
     container.boundElements = [
       obsoleteBinding,
@@ -916,11 +916,11 @@ describe("repairing bindings", () => {
   it("should remove containerId if no container exists when repair is true", () => {
     const boundElement = API.createElement({
       type: "text",
-      containerId: "non-existent",
+      containerId: "nonexistent",
     });
     const boundElementDeleted = API.createElement({
       type: "text",
-      containerId: "non-existent",
+      containerId: "nonexistent",
       isDeleted: true,
     });
 
@@ -932,11 +932,11 @@ describe("repairing bindings", () => {
     expect(restoredElements).toEqual([
       expect.objectContaining({
         id: boundElement.id,
-        containerId: "non-existent",
+        containerId: "nonexistent",
       }),
       expect.objectContaining({
         id: boundElementDeleted.id,
-        containerId: "non-existent",
+        containerId: "nonexistent",
       }),
     ]);
 

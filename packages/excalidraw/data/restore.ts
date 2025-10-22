@@ -555,7 +555,7 @@ const repairBoundElement = (
 };
 
 /**
- * Remove an element's frameId if its containing frame is non-existent
+ * Remove an element's frameId if its containing frame is nonexistent
  *
  * NOTE mutates elements.
  */
