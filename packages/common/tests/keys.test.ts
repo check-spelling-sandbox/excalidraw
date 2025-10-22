@@ -24,7 +24,7 @@ describe("key matcher", async () => {
     ).toBeFalsy();
   });
 
-  it("should match key (case insensitive) when key is latin", async () => {
+  it("should match key (case-insensitive) when key is latin", async () => {
     expect(
       matchKey(new KeyboardEvent("keydown", { key: "z" }), KEYS.Z),
     ).toBeTruthy();
