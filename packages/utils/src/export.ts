@@ -69,7 +69,7 @@ export const exportToCanvas = ({
 
         const max = Math.max(width, height);
 
-        // if content is less then maxWidthOrHeight, fallback on supplied scale
+        // if content is less than maxWidthOrHeight, fallback on supplied scale
         const scale =
           maxWidthOrHeight < max
             ? maxWidthOrHeight / max
