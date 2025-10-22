@@ -163,7 +163,7 @@ export const actionGroup = register({
         ),
       });
     });
-    // keep the z order within the group the same, but move them
+    // keep the z order within the group unchanged, but move them
     // to the z order of the highest element in the layer stack
     const elementsInGroup = getElementsInGroup(nextElements, newGroupId);
     const lastElementInGroup = elementsInGroup[elementsInGroup.length - 1];
