@@ -753,8 +753,8 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       appState,
     );
 
-    // Avoid broadcasting to the rest of the collaborators the scene
-    // we just received!
+    // Avoid broadcasting the scene we just received to the rest of
+    // the collaborators!
     // Note: this needs to be set before updating the scene as it
     // synchronously calls render.
     this.setLastBroadcastedOrReceivedSceneVersion(
