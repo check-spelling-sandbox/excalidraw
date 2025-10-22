@@ -7677,7 +7677,7 @@ class App extends React.Component<AppProps, AppState> {
     };
   }
 
-  // Returns whether the event is a dragging a scrollbar
+  // Returns whether the event is a scrollbar drag
   private handleDraggingScrollBar(
     event: React.PointerEvent<HTMLElement>,
     pointerDownState: PointerDownState,
