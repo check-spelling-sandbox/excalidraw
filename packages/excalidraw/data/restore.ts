@@ -458,7 +458,7 @@ export const restoreElement = (
         name: element.name ?? null,
       });
 
-    // Don't use default case so as to catch a missing an element type case.
+    // Don't use default case so as to catch a missing element type case.
     // We also don't want to throw, but instead return void so we filter
     // out these unsupported elements from the restored array.
   }
