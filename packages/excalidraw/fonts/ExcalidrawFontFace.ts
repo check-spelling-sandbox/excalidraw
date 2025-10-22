@@ -90,7 +90,7 @@ export class ExcalidrawFontFace {
   public fetchFont(url: URL | DataURL): Promise<ArrayBuffer> {
     return promiseTry(async () => {
       const response = await fetch(url, {
-        // always prefer cache (even stale), otherwise it always triggers an unnecessary validation request
+        // always prefer cache (even stale); otherwise, it always triggers an unnecessary validation request
         // which we don't need as we are controlling freshness of the fonts with the stable hash suffix in the url
         // https://developer.mozilla.org/en-US/docs/Web/API/Request/cache
         cache: "force-cache",
@@ -201,7 +201,7 @@ export class ExcalidrawFontFace {
       ).toString();
     }
 
-    // ensure there is a trailing slash, otherwise url won't be correctly concatenated
+    // ensure there is a trailing slash; otherwise, url won't be correctly concatenated
     result = `${result.replace(/\/+$/, "")}/`;
 
     return result;

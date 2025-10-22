@@ -135,7 +135,7 @@ export const loadSceneOrLibraryFromBlob = async (
   /** @see restore.localAppState */
   localAppState: AppState | null,
   localElements: readonly ExcalidrawElement[] | null,
-  /** FileSystemHandle. Defaults to `blob.handle` if defined, otherwise null. */
+  /** FileSystemHandle. Defaults to `blob.handle` if defined; otherwise, null. */
   fileHandle?: FileSystemHandle | null,
 ) => {
   const contents = await parseFileContents(blob);
@@ -197,7 +197,7 @@ export const loadFromBlob = async (
   /** @see restore.localAppState */
   localAppState: AppState | null,
   localElements: readonly ExcalidrawElement[] | null,
-  /** FileSystemHandle. Defaults to `blob.handle` if defined, otherwise null. */
+  /** FileSystemHandle. Defaults to `blob.handle` if defined; otherwise, null. */
   fileHandle?: FileSystemHandle | null,
 ) => {
   const ret = await loadSceneOrLibraryFromBlob(

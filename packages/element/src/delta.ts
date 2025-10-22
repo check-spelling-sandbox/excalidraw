@@ -2040,7 +2040,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
         ).points ?? [];
 
       if (!Delta.isDifferent(deletedPoints, insertedPoints)) {
-        // delete the points from delta if there is no difference, otherwise leave them as they were captured due to consistency
+        // delete the points from delta if there is no difference; otherwise, leave them as they were captured due to consistency
         Reflect.deleteProperty(deleted, "points");
         Reflect.deleteProperty(inserted, "points");
       }

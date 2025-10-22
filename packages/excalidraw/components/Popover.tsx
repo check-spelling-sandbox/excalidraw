@@ -96,7 +96,7 @@ export const Popover = ({
       const { width, height } = container.getBoundingClientRect();
 
       // hack for StrictMode so this effect only runs once for
-      // the same top/left position, otherwise
+      // the same top/left position; otherwise,
       // we'd potentically reposition twice (once for viewport overflow)
       // and once for top/left position afterwards
       if (

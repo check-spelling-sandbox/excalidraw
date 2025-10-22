@@ -988,7 +988,7 @@ const getNextSingleWidthAndHeightFromPointer = (
     scaleY = (startBottomRight[1] - rotatedPointer[1]) / boundsCurrentHeight;
   }
 
-  // We have to use dimensions of element on screen, otherwise the scaling of the
+  // We have to use dimensions of element on screen; otherwise, the scaling of the
   // dimensions won't match the cursor for linear elements.
   let nextWidth = latestElement.width * scaleX;
   let nextHeight = latestElement.height * scaleY;

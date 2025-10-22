@@ -153,7 +153,7 @@ export class Store {
         action,
         // let's sync invalid indices first, so that we could detect this change
         // also have the synced elements immutable, so that we don't mutate elements,
-        // that are already in the scene, otherwise we wouldn't see any change
+        // that are already in the scene; otherwise, we wouldn't see any change
         params.elements
           ? syncInvalidIndicesImmutable(params.elements)
           : undefined,

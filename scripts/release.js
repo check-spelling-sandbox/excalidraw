@@ -17,7 +17,7 @@ const PACKAGES_DIR = path.resolve(__dirname, "../packages");
  * - yarn release                                 -> publishes `@excalidraw` packages with "test" tag and "-[hash]" version suffix
  * - yarn release --tag=test                      -> same as above
  * - yarn release --tag=next                      -> publishes `@excalidraw` packages with "next" tag and version "-[hash]" suffix
- * - yarn release --tag=next --non-interactive    -> skips interactive prompts (runs on CI/CD), otherwise same as above
+ * - yarn release --tag=next --non-interactive    -> skips interactive prompts (runs on CI/CD); otherwise, same as above
  * - yarn release --tag=latest --version=0.19.0   -> publishes `@excalidraw` packages with "latest" tag and version "0.19.0" & prepares changelog for the release
  *
  * @returns [tag, version, nonInteractive]
@@ -38,7 +38,7 @@ const getArguments = () => {
   - yarn release                                 -> publishes \`@excalidraw\` packages with "test" tag and "-[hash]" version suffix
   - yarn release --tag=test                      -> same as above
   - yarn release --tag=next                      -> publishes \`@excalidraw\` packages with "next" tag and version "-[hash]" suffix
-  - yarn release --tag=next --non-interactive    -> skips interactive prompts (runs on CI/CD), otherwise same as above
+  - yarn release --tag=next --non-interactive    -> skips interactive prompts (runs on CI/CD); otherwise, same as above
   - yarn release --tag=latest --version=0.19.0   -> publishes \`@excalidraw\` packages with "latest" tag and version "0.19.0" & prepares changelog for the release`);
 
       process.exit(0);

@@ -119,7 +119,7 @@ module.exports.woff2ServerPlugin = (options = {}) => {
           "./assets/NotoEmoji-Regular.ttf",
         );
 
-        // need to use the same em size as built-in fonts, otherwise pyftmerge throws (modified manually with font forge)
+        // need to use the same em size as built-in fonts; otherwise, pyftmerge throws (modified manually with font forge)
         const emojiPath_2048 = path.resolve(
           __dirname,
           "./assets/NotoEmoji-Regular-2048.ttf",
@@ -130,7 +130,7 @@ module.exports.woff2ServerPlugin = (options = {}) => {
           "./assets/LiberationSans-Regular.ttf",
         );
 
-        // need to use the same em size as built-in fonts, otherwise pyftmerge throws (modified manually with font forge)
+        // need to use the same em size as built-in fonts; otherwise, pyftmerge throws (modified manually with font forge)
         const liberationPath_2048 = path.resolve(
           __dirname,
           "./assets/LiberationSans-Regular-2048.ttf",
@@ -189,7 +189,7 @@ module.exports.woff2ServerPlugin = (options = {}) => {
             fallbackFontsPaths.push(emojiPath, liberationPath);
           }
 
-          // drop Vertical related metrics, otherwise it does not allow us to merge the fonts
+          // drop Vertical related metrics; otherwise, it does not allow us to merge the fonts
           // vhea (Vertical Header Table)
           // vmtx (Vertical Metrics Table)
           execSync(

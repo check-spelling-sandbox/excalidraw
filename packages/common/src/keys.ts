@@ -98,7 +98,7 @@ export const isLatinChar = (key: string) => /^[a-z]$/.test(key.toLowerCase());
  * Used to match key events for any keyboard layout, especially on Windows and Linux,
  * where non-latin character with modified (CMD) is not substituted with latin-based alternative.
  *
- * Uses `event.key` when it's latin, otherwise fallbacks to `event.code` (if mapping exists).
+ * Uses `event.key` when it's latin; otherwise, fallbacks to `event.code` (if mapping exists).
  *
  * Example of pressing "z" on different layouts, with the chosen key or code highlighted in []:
  *

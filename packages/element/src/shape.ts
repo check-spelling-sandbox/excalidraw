@@ -106,7 +106,7 @@ export class ShapeCache {
   };
 
   /**
-   * Generates & caches shape for element if not already cached, otherwise
+   * Generates & caches shape for element if not already cached; otherwise,
    * returns cached shape.
    */
   public static generateElementShape = <

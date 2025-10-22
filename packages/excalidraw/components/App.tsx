@@ -6981,7 +6981,7 @@ class App extends React.Component<AppProps, AppState> {
     // if dragging element is freedraw and another pointerdown event occurs
     // a second finger is on the screen
     // discard the freedraw element if it is very short because it is likely
-    // just a spike, otherwise finalize the freedraw element when the second
+    // just a spike; otherwise, finalize the freedraw element when the second
     // finger is lifted
     if (
       event.pointerType === "touch" &&
