@@ -409,7 +409,7 @@ describe("history", () => {
       Keyboard.undo();
       expect(API.getUndoStack().length).toBe(1);
       expect(API.getRedoStack().length).toBe(3);
-      assertSelectedElements(rect); // get's reselected with out pushed entry!
+      assertSelectedElements(rect); // get's reselected without pushed entry!
       expect(h.elements).toEqual([
         expect.objectContaining({ id: rect.id, backgroundColor: transparent }),
       ]);
