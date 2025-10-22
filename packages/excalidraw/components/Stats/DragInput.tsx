@@ -198,7 +198,7 @@ const StatsDragInput = <
     };
   }, [
     // we need to track change of `editable` state as mount/unmount
-    // because react doesn't trigger `blur` when a an input is blurred due
+    // because react doesn't trigger `blur` when an input is blurred due
     // to being disabled (https://github.com/facebook/react/issues/9142).
     // As such, if we keep rendering disabled inputs, then change in selection
     // to an element that has a given property as non-editable would not trigger

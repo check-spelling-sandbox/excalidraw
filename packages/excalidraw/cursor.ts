@@ -92,7 +92,7 @@ export const setCursorForShape = (
   } else if (isEraserActive(appState)) {
     setEraserCursor(interactiveCanvas, appState.theme);
     // do nothing if image tool is selected which suggests there's
-    // a image-preview set as the cursor
+    // an image-preview set as the cursor
     // Ignore custom type as well and let host decide
   } else if (appState.activeTool.type === "laser") {
     const url =
