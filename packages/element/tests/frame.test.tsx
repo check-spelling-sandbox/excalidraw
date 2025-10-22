@@ -149,7 +149,7 @@ describe("adding elements to frames", () => {
         expectEqualIds([rect2, rect3, frame]);
       });
 
-      it("should add elements when there are other other elements in between", async () => {
+      it("should add elements when there are other elements in between", async () => {
         API.setElements([frame, rect1, rect2, rect4, rect3]);
 
         func(frame, rect2);
@@ -193,7 +193,7 @@ describe("adding elements to frames", () => {
         expectEqualIds([rect3, rect2, frame]);
       });
 
-      it("should add elements when there are other other elements in between", async () => {
+      it("should add elements when there are other elements in between", async () => {
         API.setElements([rect1, rect2, rect4, rect3, frame]);
 
         func(frame, rect2);
@@ -228,7 +228,7 @@ describe("adding elements to frames", () => {
         expectEqualIds([rect2, rect3, frame]);
       });
 
-      it.skip("should add elements when there are other other elements in between", async () => {
+      it.skip("should add elements when there are other elements in between", async () => {
         API.setElements([rect2, rect1, frame, rect4, rect3]);
 
         func(frame, rect2);
