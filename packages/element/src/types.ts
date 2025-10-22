@@ -60,7 +60,7 @@ type _ExcalidrawElementBase = Readonly<{
   version: number;
   /** Random integer that is regenerated on each change.
       Used for deterministic reconciliation of updates during collaboration,
-      in case the versions (see above) are identical. */
+      if the versions (see above) are identical. */
   versionNonce: number;
   /** String in a fractional form defined by https://github.com/rocicorp/fractional-indexing.
       Used for ordering in multiplayer scenarios, such as during reconciliation or undo / redo.

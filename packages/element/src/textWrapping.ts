@@ -522,7 +522,7 @@ const trimLine = (line: string, font: FontString, maxWidth: number) => {
     return line;
   }
 
-  // defensively default to `trimeEnd` in case the regex does not match
+  // defensively default to `trimeEnd` if the regex does not match
   let [, trimmedLine, whitespaces] = line.match(/^(.+?)(\s+)$/) ?? [
     line,
     line.trimEnd(),
