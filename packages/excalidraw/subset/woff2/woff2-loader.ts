@@ -35,7 +35,7 @@ const load = (): Promise<{
   return new Promise((resolve, reject) => {
     try {
       // initializing the module manually, so that we could pass in the wasm binary
-      // note that the `bindings.then` is not not promise/A+ compliant, hence the need for another explicit try/catch
+      // note that the `bindings.then` is not promise/A+ compliant, hence the need for another explicit try/catch
       bindings({ wasmBinary: binary }).then(
         (module: {
           woff2Enc: (buffer: ArrayBuffer, byteLength: number) => Vector;
