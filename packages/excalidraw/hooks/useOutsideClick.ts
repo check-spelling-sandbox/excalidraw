@@ -15,7 +15,7 @@ export function useOutsideClick<T extends HTMLElement>(
    * Returning `true` overrides the default behavior and `callback` won't be
    * called.
    *
-   * Returning `undefined` will fallback to the default behavior.
+   * Returning `undefined` will fall back to the default behavior.
    */
   isInside?: (
     event: Event & { target: T },

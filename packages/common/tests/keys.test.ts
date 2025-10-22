@@ -155,7 +155,7 @@ describe("key matcher", async () => {
     ).toBeFalsy();
   });
 
-  it("should fallback to code when key is non-latin", async () => {
+  it("should fall back to code when key is non-latin", async () => {
     // Macedonian
     expect(
       matchKey(

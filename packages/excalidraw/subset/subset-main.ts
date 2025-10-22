@@ -65,7 +65,7 @@ export const subsetWoff2GlyphsByCodepoints = async (
         );
       }
 
-      // fallback to the main thread
+      // fall back to the main thread
       return subsetToBase64(arrayBuffer, codePoints);
     }
   });

@@ -566,7 +566,7 @@ export const copyBlobToClipboardAsPng = async (blob: Blob | Promise<Blob>) => {
     //
     // Note that Firefox (and potentially others) seems to support Promise
     // ClipboardItem constructor, but throws on an unrelated MIME type error.
-    // So we need to await this and fallback to awaiting the blob if applicable.
+    // So we need to await this and fall back to awaiting the blob if applicable.
     await navigator.clipboard.write([
       new window.ClipboardItem({
         [MIME_TYPES.png]: blob,

@@ -182,7 +182,7 @@ module.exports.woff2ServerPlugin = (options = {}) => {
             fallbackFontsPaths.push(xiaolaiPath);
           }
 
-          // add liberation as fallback to all fonts, so that unknown characters are rendered similarly to how browser renders them (Helvetica, Arial, etc.)
+          // add liberation as fall back to all fonts, so that unknown characters are rendered similarly to how browser renders them (Helvetica, Arial, etc.)
           if (baseFont.data.head.unitsPerEm === 2048) {
             fallbackFontsPaths.push(emojiPath_2048, liberationPath_2048);
           } else {

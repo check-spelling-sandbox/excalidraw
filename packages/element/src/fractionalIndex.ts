@@ -188,7 +188,7 @@ export const syncMovedIndices = (
       mutateElement(element, elementsMap, { index });
     }
   } catch (e) {
-    // fallback to default sync
+    // fall back to default sync
     syncInvalidIndices(elements);
   }
 

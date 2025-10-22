@@ -86,7 +86,7 @@ export const KEYS = {
 
 export type Key = keyof typeof KEYS;
 
-// defines key code mapping for matching codes as fallback to respective keys on non-latin keyboard layouts
+// defines key code mapping for matching codes as fall back to respective keys on non-latin keyboard layouts
 export const KeyCodeMap = new Map<ValueOf<typeof KEYS>, ValueOf<typeof CODES>>([
   [KEYS.Z, CODES.Z],
   [KEYS.Y, CODES.Y],
@@ -129,7 +129,7 @@ export const matchKey = (
     return true;
   }
 
-  // non-latin layouts fallback to code
+  // non-latin layouts fall back to code
   const code = KeyCodeMap.get(key);
   return Boolean(code && !isLatinChar(event.key) && event.code === code);
 };

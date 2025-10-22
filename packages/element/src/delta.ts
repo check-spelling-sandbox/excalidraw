@@ -1619,7 +1619,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
       let element = elements.get(id);
 
       if (!element) {
-        // always fallback to the local snapshot, in cases when we cannot find the element in the elements array
+        // always fall back to the local snapshot, in cases when we cannot find the element in the elements array
         element = snapshot.get(id);
 
         if (element) {
@@ -2007,7 +2007,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     }
 
     // synchronize all elements that were actually moved
-    // could fallback to synchronizing all invalid indices
+    // could fall back to synchronizing all invalid indices
     return arrayToMap(syncMovedIndices(ordered, moved)) as typeof elements;
   }
 
