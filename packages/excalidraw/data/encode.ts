@@ -195,7 +195,7 @@ function dataView(
   if (value != null) {
     if (value > Math.pow(2, DATA_VIEW_BITS_MAP[bytes]) - 1) {
       throw new Error(
-        `attempting to set value higher than the allocated bytes (value: ${value}, bytes: ${bytes})`,
+        `attempting to set value greater than the allocated bytes (value: ${value}, bytes: ${bytes})`,
       );
     }
     const method = `setUint${DATA_VIEW_BITS_MAP[bytes]}` as const;
