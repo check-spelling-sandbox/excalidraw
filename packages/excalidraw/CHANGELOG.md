@@ -66,9 +66,9 @@ We've transitioned from `UMD` to `ESM` bundle format. Our new `dist` folder insi
 
 Make sure that your JavaScript environment supports ES modules. You _may_ need to define `"type": "module"` in your `package.json` file or as part of the `<script type="module" />` attribute.
 
-##### Typescript: deprecated "moduleResolution": `"node"` or `"node10"`
+##### TypeScript: deprecated "moduleResolution": `"node"` or `"node10"`
 
-Since `"node"` and `"node10"` do not support `package.json` `"exports"` fields, having these values in your `tsconfig.json` will not work. Instead, use `"bundler"`, `"node16"` or `"nodenext"` values. For more information, see [Typescript's documentation](https://www.typescriptlang.org/tsconfig/#moduleResolution).
+Since `"node"` and `"node10"` do not support `package.json` `"exports"` fields, having these values in your `tsconfig.json` will not work. Instead, use `"bundler"`, `"node16"` or `"nodenext"` values. For more information, see [TypeScript's documentation](https://www.typescriptlang.org/tsconfig/#moduleResolution).
 
 ##### ESM strict resolution
 
