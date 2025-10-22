@@ -2590,7 +2590,7 @@ describe("history", () => {
       ]);
     });
 
-    it("should iterate through the history when when element change relates to remotely deleted element", async () => {
+    it("should iterate through the history when element change relates to remotely deleted element", async () => {
       UI.createElement("rectangle", { x: 10 });
       togglePopover("Background");
       UI.clickOnTestId("color-red");

@@ -7617,7 +7617,7 @@ exports[`history > multiplayer undo/redo > should iterate through the history wh
 ]
 `;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] appState 1`] = `
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] appState 1`] = `
 {
   "activeEmbeddable": null,
   "activeLockedId": null,
@@ -7732,7 +7732,7 @@ exports[`history > multiplayer undo/redo > should iterate through the history wh
 }
 `;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] element 0 1`] = `
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] element 0 1`] = `
 {
   "angle": 0,
   "backgroundColor": "#ffec99",
@@ -7762,13 +7762,13 @@ exports[`history > multiplayer undo/redo > should iterate through the history wh
 }
 `;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] number of elements 1`] = `1`;
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] number of elements 1`] = `1`;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] number of renders 1`] = `9`;
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] number of renders 1`] = `9`;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] redo stack 1`] = `[]`;
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] redo stack 1`] = `[]`;
 
-exports[`history > multiplayer undo/redo > should iterate through the history when when element change relates to remotely deleted element > [end of test] undo stack 1`] = `
+exports[`history > multiplayer undo/redo > should iterate through the history when element change relates to remotely deleted element > [end of test] undo stack 1`] = `
 [
   {
     "appState": AppStateDelta {
