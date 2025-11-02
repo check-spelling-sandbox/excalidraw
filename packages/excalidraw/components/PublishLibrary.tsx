@@ -532,7 +532,7 @@ const PublishLibrary = ({
         </form>
       ) : (
         <p style={{ padding: "1em", textAlign: "center", fontWeight: 500 }}>
-          {t("publishDialog.atleastOneLibItem")}
+          {t("publishDialog.atLeastOneLibItem")}
         </p>
       )}
     </Dialog>
