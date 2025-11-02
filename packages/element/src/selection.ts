@@ -229,7 +229,7 @@ export const getTargetElements = (
       });
 
 /**
- * returns prevState's selectedElementids if no change from previous, so as to
+ * returns prevState's selectedElementIds if no change from previous, so as to
  * retain reference identity for memoization
  */
 export const makeNextSelectedElementIds = (
