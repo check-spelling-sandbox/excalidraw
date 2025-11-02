@@ -441,7 +441,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Optimize frameToHighlight state change and snapLines state change [#8763](https://github.com/excalidraw/excalidraw/pull/8763)
 
-- Make some events expllicitly active to avoid console warnings [#8757](https://github.com/excalidraw/excalidraw/pull/8757)
+- Make some events explicitly active to avoid console warnings [#8757](https://github.com/excalidraw/excalidraw/pull/8757)
 
 - Unify binding update options for `updateBoundElements()` [#8832](https://github.com/excalidraw/excalidraw/pull/8832)
 
