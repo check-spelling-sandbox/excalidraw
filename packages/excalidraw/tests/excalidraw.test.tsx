@@ -131,7 +131,7 @@ describe("<Excalidraw/>", () => {
 
   describe("Test UIOptions prop", () => {
     describe("Test canvasActions", () => {
-      it('should render menu with default items when "UIOPtions" is "undefined"', async () => {
+      it('should render menu with default items when "UIOptions" is "undefined"', async () => {
         const { container } = await render(
           <Excalidraw UIOptions={undefined} />,
         );
