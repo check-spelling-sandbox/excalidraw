@@ -68,7 +68,7 @@ const createESMRawBuild = async () => {
     ...chunksConfig,
   });
 
-  // production minified buld without sourcemaps
+  // production minified build without sourcemaps
   await buildProd({
     ...getConfig("dist/prod"),
     ...chunksConfig,
