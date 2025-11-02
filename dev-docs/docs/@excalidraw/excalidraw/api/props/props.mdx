@@ -204,15 +204,15 @@ import { defaultLang, languages } from "@excalidraw/excalidraw";
 
 ### viewModeEnabled
 
-This prop indicates whether the app is in `view mode`. When supplied, the value takes precedence over _intialData.appState.viewModeEnabled_, the `view mode` will be fully controlled by the host app, and users won't be able to toggle it from within the app.
+This prop indicates whether the app is in `view mode`. When supplied, the value takes precedence over _initialData.appState.viewModeEnabled_, the `view mode` will be fully controlled by the host app, and users won't be able to toggle it from within the app.
 
 ### zenModeEnabled
 
-This prop indicates whether the app is in `zen mode`. When supplied, the value takes precedence over _intialData.appState.zenModeEnabled_, the `zen mode` will be fully controlled by the host app, and users won't be able to toggle it from within the app.
+This prop indicates whether the app is in `zen mode`. When supplied, the value takes precedence over _initialData.appState.zenModeEnabled_, the `zen mode` will be fully controlled by the host app, and users won't be able to toggle it from within the app.
 
 ### gridModeEnabled
 
-This prop indicates whether the shows the grid. When supplied, the value takes precedence over _intialData.appState.gridModeEnabled_, the grid will be fully controlled by the host app, and users won't be able to toggle it from within the app.
+This prop indicates whether the shows the grid. When supplied, the value takes precedence over _initialData.appState.gridModeEnabled_, the grid will be fully controlled by the host app, and users won't be able to toggle it from within the app.
 
 ### libraryReturnUrl
 
@@ -220,13 +220,13 @@ If supplied, this URL will be used when user tries to install a library from [li
 
 ### theme
 
-This prop controls Excalidraw's theme. When supplied, the value takes precedence over _intialData.appState.theme_, the theme will be fully controlled by the host app, and users won't be able to toggle it from within the app unless _UIOptions.canvasActions.toggleTheme_ is set to `true`, in which case the `theme` prop will control Excalidraw's default theme with ability to allow theme switching (you must take care of updating the `theme` prop when you detect a change to `appState.theme` from the [onChange](#onchange) callback).
+This prop controls Excalidraw's theme. When supplied, the value takes precedence over _initialData.appState.theme_, the theme will be fully controlled by the host app, and users won't be able to toggle it from within the app unless _UIOptions.canvasActions.toggleTheme_ is set to `true`, in which case the `theme` prop will control Excalidraw's default theme with ability to allow theme switching (you must take care of updating the `theme` prop when you detect a change to `appState.theme` from the [onChange](#onchange) callback).
 
 You can use [`THEME`](/docs/@excalidraw/excalidraw/api/utils#theme) to specify the theme.
 
 ### name
 
-This prop sets the `name` of the drawing which will be used when exporting the drawing. When supplied, the value takes precedence over _intialData.appState.name_, the `name` will be fully controlled by host app and the users won't be able to edit from within Excalidraw.
+This prop sets the `name` of the drawing which will be used when exporting the drawing. When supplied, the value takes precedence over _initialData.appState.name_, the `name` will be fully controlled by host app and the users won't be able to edit from within Excalidraw.
 
 ### detectScroll
 
