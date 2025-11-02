@@ -962,7 +962,7 @@ export const renderElement = (
           (!element.angle ||
             // or check if angle is a right angle in which case we can still
             // disable smoothing without adversely affecting the result
-            // We need less-than comparison because of FP artihmetic
+            // We need less-than comparison because of FP arithmetic
             isRightAngleRads(element.angle))
         ) {
           // Disabling smoothing makes output much sharper, especially for
