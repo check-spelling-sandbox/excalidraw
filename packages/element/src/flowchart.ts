@@ -586,7 +586,7 @@ export class FlowChartNavigator {
     /**
      * CASE:
      * - (just started exploring or still going at the same direction) OR
-     * - there're no nodes at the given direction
+     * - there are no nodes at the given direction
      *
      * RESULT:
      * - go to some other unvisited linked node
