@@ -83,7 +83,7 @@ export const ellipseTouchesPoint = <Point extends GlobalPoint | LocalPoint>(
  *
  * @param p The point to consider
  * @param ellipse The ellipse to calculate the distance to
- * @returns The eucledian distance
+ * @returns The euclidean distance
  */
 export const ellipseDistanceFromPoint = <
   Point extends GlobalPoint | LocalPoint,
