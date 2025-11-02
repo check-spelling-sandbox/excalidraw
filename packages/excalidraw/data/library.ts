@@ -73,7 +73,7 @@ const onLibraryUpdateEmitter = new Emitter<
   [update: LibraryUpdate, libraryItems: LibraryItems]
 >();
 
-export type LibraryAdatapterSource = "load" | "save";
+export type LibraryAdapterSource = "load" | "save";
 
 export interface LibraryPersistenceAdapter {
   /**
@@ -88,7 +88,7 @@ export interface LibraryPersistenceAdapter {
      * Indicates whether we're loading data for save purposes, or reading
      * purposes, in which case host app can implement more aggressive caching.
      */
-    source: LibraryAdatapterSource;
+    source: LibraryAdapterSource;
   }): MaybePromise<{ libraryItems: LibraryItems_anyVersion } | null>;
   /** Should persist to the database as is (do no change the data structure). */
   save(libraryData: LibraryPersistedData): MaybePromise<void>;
@@ -547,7 +547,7 @@ class AdapterTransaction {
 
   static async getLibraryItems(
     adapter: LibraryPersistenceAdapter,
-    source: LibraryAdatapterSource,
+    source: LibraryAdapterSource,
     _queue = true,
   ): Promise<LibraryItems> {
     const task = () =>
@@ -583,7 +583,7 @@ class AdapterTransaction {
     this.adapter = adapter;
   }
 
-  getLibraryItems(source: LibraryAdatapterSource) {
+  getLibraryItems(source: LibraryAdapterSource) {
     return AdapterTransaction.getLibraryItems(this.adapter, source, false);
   }
 }
@@ -917,7 +917,7 @@ export const useHandleLibrary = (
           isLibraryLoadedRef.current = true;
         });
     }
-    // ---------------------------------------------- data source datapter -----
+    // ---------------------------------------------- data source adapter -----
 
     window.addEventListener(EVENT.HASHCHANGE, onHashChange);
     return () => {
