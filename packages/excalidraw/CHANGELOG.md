@@ -1633,7 +1633,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Hide canvas-modifying UI in view mode [#5815](https://github.com/excalidraw/excalidraw/pull/5815)
 
-- Fix vertical/horizntal centering icons [#5812](https://github.com/excalidraw/excalidraw/pull/5812)
+- Fix vertical/horizontal centering icons [#5812](https://github.com/excalidraw/excalidraw/pull/5812)
 
 - Consistent use of ZOOM_STEP [#5801](https://github.com/excalidraw/excalidraw/pull/5801)
 
