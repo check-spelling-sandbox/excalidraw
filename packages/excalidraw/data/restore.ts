@@ -516,7 +516,7 @@ const repairContainerElement = (
 
 /**
  * Repairs target bound element's container's boundElements array,
- * or removes contaienrId if container does not exist.
+ * or removes containerId if container does not exist.
  *
  * NOTE mutates elements.
  */
