@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 /**
- * Slitghly modified emscripten bindings of https://github.com/kekee000/fonteditor-core/blob/582bba757aa2915ec2240c61717ff12c50594675/woff2src/woff2.js
+ * Slightly modified emscripten bindings of https://github.com/kekee000/fonteditor-core/blob/582bba757aa2915ec2240c61717ff12c50594675/woff2src/woff2.js
  *
  * CHANGELOG:
  * - replaced existing exports with default esm export (`export default Module;`)
