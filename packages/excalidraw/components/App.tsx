@@ -7470,7 +7470,7 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   /**
-   * pointerup may not fire in certian cases (user tabs away...), so in order
+   * pointerup may not fire in certain cases (user tabs away...), so in order
    * to properly cleanup pointerdown state, we need to fire any hanging
    * pointerup handlers manually
    */
