@@ -823,7 +823,7 @@ export const useHandleLibrary = (
         })
         .catch((error: any) => {
           console.error(
-            `UseHandeLibrary getInitialLibraryItems failed: ${error?.message}`,
+            `UseHandleLibrary getInitialLibraryItems failed: ${error?.message}`,
           );
         });
     }
