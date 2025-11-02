@@ -245,11 +245,11 @@ const addNewNode = (
 ) => {
   const elementsMap = scene.getNonDeletedElementsMap();
   const successors = getSuccessors(element, elementsMap, direction);
-  const predeccessors = getPredecessors(element, elementsMap, direction);
+  const predecessors = getPredecessors(element, elementsMap, direction);
 
   const offsets = getOffsets(
     element,
-    [...successors, ...predeccessors],
+    [...successors, ...predecessors],
     direction,
   );
 
