@@ -64,7 +64,7 @@ vi.mock("socket.io-client", () => {
 });
 
 /**
- * These test would deserve to be extended by testing collab with (at least) two clients simultanouesly,
+ * These test would deserve to be extended by testing collab with (at least) two clients simultaneously,
  * while having access to both scenes, appstates stores, histories and etc.
  * i.e. multiplayer history tests could be a good first candidate, as we could test both history stacks simultaneously.
  */
