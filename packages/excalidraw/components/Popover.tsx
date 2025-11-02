@@ -97,7 +97,7 @@ export const Popover = ({
 
       // hack for StrictMode so this effect only runs once for
       // the same top/left position; otherwise,
-      // we'd potentically reposition twice (once for viewport overflow)
+      // we'd potentially reposition twice (once for viewport overflow)
       // and once for top/left position afterwards
       if (
         lastInitializedPosRef.current?.top === top &&
