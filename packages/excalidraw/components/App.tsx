@@ -2366,7 +2366,7 @@ class App extends React.Component<AppProps, AppState> {
           data: {
             status: "error",
             code: "ERR_OAI",
-            message: "Nothing genereated :(",
+            message: "Nothing generated :(",
           },
         });
         return;
