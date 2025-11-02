@@ -182,7 +182,7 @@ function dataView(
 /**
  * abstraction over DataView that serves as a typed getter/setter in case
  * you're using constants for the byte size and want to ensure there's no
- * discrepenancy in the encoding across refactors.
+ * discrepancy in the encoding across refactors.
  *
  * DataView serves for an endian-agnostic handling of numbers in ArrayBuffers.
  */
