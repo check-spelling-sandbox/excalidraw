@@ -104,7 +104,7 @@ export class Store {
   }
 
   /**
-   * Use to schedule a delta calculation, which will consquentially be emitted as `DurableStoreIncrement` and pushed in the undo stack.
+   * Use to schedule a delta calculation, which will consequently be emitted as `DurableStoreIncrement` and pushed in the undo stack.
    */
   // TODO: Suspicious that this is called so many places. Seems error-prone.
   public scheduleCapture() {
