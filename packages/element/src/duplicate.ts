@@ -187,7 +187,7 @@ export const duplicateElements = (
   // helper functions
   // -------------------------------------------------------------------------
 
-  // Used for the heavy lifing of copying a single element, a group of elements
+  // Used for the heavy lifting of copying a single element, a group of elements
   // an element with bound text etc.
   const copyElements = <T extends ExcalidrawElement | ExcalidrawElement[]>(
     element: T,
