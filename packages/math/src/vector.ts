@@ -118,7 +118,7 @@ export function vectorScale(v: Vector, scalar: number): Vector {
 }
 
 /**
- * Calculates the sqare magnitude of a vector. Use this if you compare
+ * Calculates the square magnitude of a vector. Use this if you compare
  * magnitudes as it saves you an SQRT.
  *
  * @param v The vector to measure
