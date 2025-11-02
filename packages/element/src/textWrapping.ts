@@ -253,7 +253,7 @@ const Break = {
     const builder = () => Regex.build(`(?<=[${joined}])`);
     return Break.Chain(builder) as Omit<
       ReturnType<typeof Break.Chain>,
-      "PreceededBy"
+      "PrecededBy"
     >;
   },
   /**
@@ -275,7 +275,7 @@ const Break = {
     const builder = () => Regex.build(`(?<=[${joined}])(?![${joined}])`);
     return Break.Chain(builder) as Omit<
       ReturnType<typeof Break.Chain>,
-      "PreceededBy"
+      "PrecededBy"
     >;
   },
   /**
@@ -308,13 +308,13 @@ const Break = {
     /**
      * Specify additional class of characters that should precede the root regex.
      */
-    PreceededBy: (...regexes: RegExp[]) => {
+    PrecededBy: (...regexes: RegExp[]) => {
       const root = rootBuilder();
-      const preceeded = Break.After(...regexes).Build();
-      const builder = () => Regex.and(preceeded, root);
+      const preceded = Break.After(...regexes).Build();
+      const builder = () => Regex.and(preceded, root);
       return Break.Chain(builder) as Omit<
         ReturnType<typeof Break.Chain>,
-        "PreceededBy"
+        "PrecededBy"
       >;
     },
     /**
@@ -334,8 +334,8 @@ const Break = {
      */
     NotPrecededBy: (...regexes: RegExp[]) => {
       const root = rootBuilder();
-      const notPreceeded = Break.NotAfter(...regexes).Build();
-      const builder = () => Regex.and(notPreceeded, root);
+      const notPreceded = Break.NotAfter(...regexes).Build();
+      const builder = () => Regex.and(notPreceded, root);
       return Break.Chain(builder) as Omit<
         ReturnType<typeof Break.Chain>,
         "NotPrecededBy"
