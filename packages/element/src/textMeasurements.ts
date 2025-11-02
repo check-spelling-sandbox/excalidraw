@@ -140,7 +140,7 @@ class CanvasTextMetricsProvider implements TextMetricsProvider {
 
     // since in test env the canvas measureText algo
     // doesn't measure text and instead just returns number of
-    // characters hence we assume that each letteris 10px
+    // characters hence we assume that each letter is 10px
     if (isTestEnv()) {
       return advanceWidth * 10;
     }
