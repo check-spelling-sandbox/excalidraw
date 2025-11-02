@@ -40,7 +40,7 @@ import type {
 
 const SNAP_DISTANCE = 8;
 
-// do not comput more gaps per axis than this limit
+// do not compute more gaps per axis than this limit
 // TODO increase or remove once we optimize
 const VISIBLE_GAPS_LIMIT_PER_AXIS = 99999;
 
