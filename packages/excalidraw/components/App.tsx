@@ -1561,7 +1561,7 @@ class App extends React.Component<AppProps, AppState> {
               }}
             >
               <div
-                //this is a hack that addresses isse with embedded excalidraw.com embeddable
+                //this is a hack that addresses issue with embedded excalidraw.com embeddable
                 //https://github.com/excalidraw/excalidraw/pull/6691#issuecomment-1607383938
                 /*ref={(ref) => {
                   if (!this.excalidrawContainerRef.current) {
