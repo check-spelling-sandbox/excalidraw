@@ -1817,7 +1817,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Disable render throttling by default & during resize [#5451](https://github.com/excalidraw/excalidraw/pull/5451)
 
-- Attach wheel event to exscalidraw container only [#5443](https://github.com/excalidraw/excalidraw/pull/5443)
+- Attach wheel event to excalidraw container only [#5443](https://github.com/excalidraw/excalidraw/pull/5443)
 
 - Show toast when browser zoom is not 100% [#5304](https://github.com/excalidraw/excalidraw/pull/5304)
 

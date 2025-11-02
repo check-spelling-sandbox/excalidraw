@@ -216,7 +216,7 @@ export const ExcalidrawPlusIframeExport = () => {
     };
   }, []);
 
-  // Since this component is expected to run in a hidden iframe on Excaildraw+,
+  // Since this component is expected to run in a hidden iframe on Excalidraw+,
   // it doesn't need to render anything. All the data we need is available in
   // LocalStorage and IndexedDB. It only needs to handle the messaging between
   // the parent window and the iframe with the relevant data.
