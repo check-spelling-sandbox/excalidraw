@@ -26,7 +26,7 @@ export interface FontMetadata {
    * whether this is a font that users can use (= shown in font picker)
    */
   private?: true;
-  /** flag to indiccate a local-only font */
+  /** flag to indicate a local-only font */
   local?: true;
   /** flag to indicate a fallback font */
   fallback?: true;
