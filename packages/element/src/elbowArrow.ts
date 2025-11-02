@@ -1444,7 +1444,7 @@ const routeElbowArrow = (
     hoveredEndElement,
   } = elbowArrowData;
 
-  // Canculate Grid positions
+  // Calculate Grid positions
   const grid = calculateGrid(
     dynamicAABBs,
     startDonglePosition ? startDonglePosition : startGlobalPoint,
