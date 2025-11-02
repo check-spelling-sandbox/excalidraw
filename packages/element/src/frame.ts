@@ -489,7 +489,7 @@ export const filterElementsEligibleAsFrameChildren = (
 };
 
 /**
- * Retains (or repairs for target frame) the ordering invriant where children
+ * Retains (or repairs for target frame) the ordering invariant where children
  * elements come right before the parent frame:
  * [el, el, child, child, frame, el]
  *
