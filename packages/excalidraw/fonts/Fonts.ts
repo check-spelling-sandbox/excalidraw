@@ -320,7 +320,7 @@ export class Fonts {
    *
    * @param family font family
    * @param metadata font metadata
-   * @param fontFacesDecriptors font faces descriptors
+   * @param fontFacesDescriptors font faces descriptors
    */
   private static register(
     this:
@@ -333,7 +333,7 @@ export class Fonts {
         },
     family: string,
     metadata: FontMetadata,
-    ...fontFacesDecriptors: ExcalidrawFontFaceDescriptor[]
+    ...fontFacesDescriptors: ExcalidrawFontFaceDescriptor[]
   ) {
     // TODO: likely we will need to abandon number value in order to support custom fonts
     const fontFamily =
@@ -345,7 +345,7 @@ export class Fonts {
     if (!registeredFamily) {
       this.registered.set(fontFamily, {
         metadata,
-        fontFaces: fontFacesDecriptors.map(
+        fontFaces: fontFacesDescriptors.map(
           ({ uri, descriptors }) =>
             new ExcalidrawFontFace(family, uri, descriptors),
         ),
