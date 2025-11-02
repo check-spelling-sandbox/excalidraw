@@ -79,7 +79,7 @@ const truncateText = (element: ExcalidrawTextElement, maxWidth: number) => {
 
   if (metrics.width > maxWidth) {
     // we iterate from the right, removing characters one by one instead
-    // of bulding the string up. This assumes that it's more likely
+    // of building the string up. This assumes that it's more likely
     // your frame names will overflow by not that many characters
     // (if ever), so it sohuld be faster this way.
     for (let i = text.length; i > 0; i--) {
