@@ -139,7 +139,7 @@ export function vectorMagnitude(v: Vector) {
 }
 
 /**
- * Normalize the vector (i.e. make the vector magnitue equal 1).
+ * Normalize the vector (i.e. make the vector magnitude equal 1).
  *
  * @param v The vector to normalize
  * @returns The new normalized vector
