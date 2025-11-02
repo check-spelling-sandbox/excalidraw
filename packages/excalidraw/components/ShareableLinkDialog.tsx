@@ -72,7 +72,7 @@ export const ShareableLinkDialog = ({
           />
         </div>
         <div className="ShareableLinkDialog__description">
-          🔒 {t("alerts.uploadedSecurly")}
+          🔒 {t("alerts.uploadedSecurely")}
         </div>
       </div>
     </Dialog>
