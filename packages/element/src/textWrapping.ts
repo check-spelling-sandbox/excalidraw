@@ -357,7 +357,7 @@ const Break = {
 };
 
 /**
- * Breaks the line into the tokens based on the found line break opporutnities.
+ * Breaks the line into the tokens based on the found line break opportunities.
  */
 export const parseTokens = (line: string) => {
   const breakLineRegex = getLineBreakRegex();
