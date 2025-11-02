@@ -1366,7 +1366,7 @@ describe("Test Linear Elements", () => {
       expect(queryByTestId(container, "align-right")).toBeNull();
     });
 
-    it("should update label coords when a label binded via context menu is unbinded", async () => {
+    it("should update label coords when a label bound via context menu is unbound", async () => {
       createTwoPointerLinearElement("arrow");
       const text = API.createElement({
         type: "text",

@@ -1305,7 +1305,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Center align text when wrapped in container via context menu [#6480](https://github.com/excalidraw/excalidraw/pull/6480)
 
-- Restore original container height when unbinding text which was binded via context menu [#6444](https://github.com/excalidraw/excalidraw/pull/6444)
+- Restore original container height when unbinding text which was bound via context menu [#6444](https://github.com/excalidraw/excalidraw/pull/6444)
 
 - Mark more props as optional for element [#6448](https://github.com/excalidraw/excalidraw/pull/6448)
 
@@ -1325,7 +1325,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Center align text when bind to container via context menu [#6451](https://github.com/excalidraw/excalidraw/pull/6451)
 
-- Update coords when text unbinded from its container [#6445](https://github.com/excalidraw/excalidraw/pull/6445)
+- Update coords when text unbound from its container [#6445](https://github.com/excalidraw/excalidraw/pull/6445)
 
 - Autoredirect to plus in prod only [#6446](https://github.com/excalidraw/excalidraw/pull/6446)
 

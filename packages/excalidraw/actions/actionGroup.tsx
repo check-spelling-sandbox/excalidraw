@@ -282,7 +282,7 @@ export const actionUngroup = register({
       }
     });
 
-    // remove binded text elements from selection
+    // remove bound text elements from selection
     updateAppState.selectedElementIds = Object.entries(
       updateAppState.selectedElementIds,
     ).reduce(
