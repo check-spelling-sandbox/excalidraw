@@ -965,7 +965,7 @@ define: {
 
 ## 0.16.0 (2023-09-19)
 
-- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
+- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programmatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
 - Introducing Web-Embeds (alias iframe element)[#6691](https://github.com/excalidraw/excalidraw/pull/6691)
 - Added [`props.validateEmbeddable`](https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/props#validateembeddable) to customize embeddable src url validation. [#6691](https://github.com/excalidraw/excalidraw/pull/6691)
 - Add support for `opts.fitToViewport` and `opts.viewportZoomFactor` in the [`ExcalidrawAPI.scrollToContent`](https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/props/excalidraw-api#scrolltocontent) API. [#6581](https://github.com/excalidraw/excalidraw/pull/6581).
@@ -999,7 +999,7 @@ define: {
 
 - Partition main canvas vertically [#6759](https://github.com/excalidraw/excalidraw/pull/6759)
 
-- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
+- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programmatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
 
 - Add support for simplePDF in Web-Embeds [#6810](https://github.com/excalidraw/excalidraw/pull/6810)
 
