@@ -89,7 +89,7 @@ const checkpoint = (name: string) => {
     `[${name}] number of renders`,
   );
   // `scrolledOutside` does not appear to be stable between test runs
-  // `selectedLinearElemnt` includes `startBindingElement` containing seed and versionNonce
+  // `selectedLinearElement` includes `startBindingElement` containing seed and versionNonce
   const {
     name: _,
     scrolledOutside,
