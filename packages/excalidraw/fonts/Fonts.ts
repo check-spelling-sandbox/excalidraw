@@ -177,7 +177,7 @@ export class Fonts {
     const families = Fonts.getUniqueFamilies(elements);
     const charsPerFamily = Fonts.getCharsPerFamily(elements);
 
-    // for simplicity, assuming we have just one family with the CJK handdrawn fallback
+    // for simplicity, assuming we have just one family with the CJK hand-drawn fallback
     const familyWithCJK = families.find((x) =>
       getFontFamilyFallbacks(x).includes(CJK_HAND_DRAWN_FALLBACK_FONT),
     );
@@ -188,7 +188,7 @@ export class Fonts {
       if (containsCJK(characters)) {
         const family = FONT_FAMILY_FALLBACKS[CJK_HAND_DRAWN_FALLBACK_FONT];
 
-        // adding the same characters to the CJK handrawn family
+        // adding the same characters to the CJK hand-drawn family
         charsPerFamily[family] = new Set(characters);
 
         // the order between the families and fallbacks is important, as fallbacks need to be defined first and in the reversed order
