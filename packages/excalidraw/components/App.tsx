@@ -7500,7 +7500,7 @@ class App extends React.Component<AppProps, AppState> {
     // automatically
     this.focusContainer();
 
-    // preventing defualt while text editing messes with cursor/focus
+    // preventing default while text editing messes with cursor/focus
     if (!this.state.editingTextElement) {
       // necessary to prevent browser from scrolling the page if excalidraw
       // not full-page #4489
