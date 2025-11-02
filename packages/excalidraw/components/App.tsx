@@ -2892,7 +2892,7 @@ class App extends React.Component<AppProps, AppState> {
 
     const { onIncrement } = this.props;
 
-    // per. optimmisation, only subscribe if there is the `onIncrement` prop registered, to avoid unnecessary computation
+    // per. optimisation, only subscribe if there is the `onIncrement` prop registered, to avoid unnecessary computation
     if (onIncrement) {
       this.store.onStoreIncrementEmitter.on((increment) => {
         onIncrement(increment);
