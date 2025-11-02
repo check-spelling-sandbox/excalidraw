@@ -449,7 +449,7 @@ export class StoreChange {
 }
 
 /**
- * Encpasulates any change to the store (durable or ephemeral).
+ * Encapsulates any change to the store (durable or ephemeral).
  */
 export abstract class StoreIncrement {
   protected constructor(
