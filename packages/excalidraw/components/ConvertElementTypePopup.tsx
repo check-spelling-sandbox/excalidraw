@@ -683,7 +683,7 @@ const filterLinearConvertibleElements = (elements: ExcalidrawElement[]) =>
 
 const THRESHOLD = 20;
 const isVert = (a: LocalPoint, b: LocalPoint) => a[0] === b[0];
-const isHorz = (a: LocalPoint, b: LocalPoint) => a[1] === b[1];
+const isHoriz = (a: LocalPoint, b: LocalPoint) => a[1] === b[1];
 const dist = (a: LocalPoint, b: LocalPoint) =>
   isVert(a, b) ? Math.abs(a[1] - b[1]) : Math.abs(a[0] - b[0]);
 
@@ -704,7 +704,7 @@ const convertLineToElbow = (line: ExcalidrawLinearElement): LocalPoint[] => {
     }
 
     // straight or needs a 90 ° bend?
-    if (isVert(start, end) || isHorz(start, end)) {
+    if (isVert(start, end) || isHoriz(start, end)) {
       ortho.push(end);
     } else {
       ortho.push(pointFrom<LocalPoint>(start[0], end[1]));
@@ -718,7 +718,7 @@ const convertLineToElbow = (line: ExcalidrawLinearElement): LocalPoint[] => {
     if (
       !(
         (isVert(ortho[i - 1], ortho[i]) && isVert(ortho[i], ortho[i + 1])) ||
-        (isHorz(ortho[i - 1], ortho[i]) && isHorz(ortho[i], ortho[i + 1]))
+        (isHoriz(ortho[i - 1], ortho[i]) && isHoriz(ortho[i], ortho[i + 1]))
       )
     ) {
       trimmed.push(ortho[i]);
