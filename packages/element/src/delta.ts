@@ -1106,7 +1106,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     inserted,
   }: Delta<ElementPartial>) => !!deleted.isDeleted === !!inserted.isDeleted;
 
-  private static satisfiesCommmonInvariants = ({
+  private static satisfiesCommonInvariants = ({
     deleted,
     inserted,
   }: Delta<ElementPartial>) =>
@@ -1139,7 +1139,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
   ) {
     for (const [id, delta] of Object.entries(elementsDelta[type])) {
       if (
-        !this.satisfiesCommmonInvariants(delta) ||
+        !this.satisfiesCommonInvariants(delta) ||
         !this.satisfiesUniqueInvariants(elementsDelta, id) ||
         !satifiesSpecialInvariants(delta)
       ) {
