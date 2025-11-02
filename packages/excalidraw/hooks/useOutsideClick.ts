@@ -39,7 +39,7 @@ export function useOutsideClick<T extends HTMLElement>(
         return callback(_event);
       }
 
-      // clicked element is in the descenendant of the target container
+      // clicked element is in the descendent of the target container
       if (
         ref.current.contains(_event.target) ||
         // target is detached from DOM (happens when the element is removed
