@@ -5313,7 +5313,7 @@ class App extends React.Component<AppProps, AppState> {
     // zoom in at the right location in the touchmove handler
     // (handleCanvasPointerMove).
     //
-    // On Macbook trackpad, we don't have those events so will zoom in at the
+    // On MacBook trackpad, we don't have those events so will zoom in at the
     // current location instead.
     //
     // As such, bail from this handler on touch devices.
