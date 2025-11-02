@@ -9256,7 +9256,7 @@ class App extends React.Component<AppProps, AppState> {
                   vectorSubtract(bottomLeft, topLeft),
                 );
 
-                // project instantDrafOffset onto leftEdge and topEdge to decompose
+                // project instantDragOffset onto leftEdge and topEdge to decompose
                 const offsetVector = vector(
                   vectorDot(instantDragOffset, topEdge),
                   vectorDot(instantDragOffset, leftEdge),
