@@ -1092,7 +1092,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     deleted,
     inserted,
   }: Delta<ElementPartial>) =>
-    // dissallowing added as "deleted", which could cause issues when resolving conflicts
+    // disallowing added as "deleted", which could cause issues when resolving conflicts
     deleted.isDeleted === true && !inserted.isDeleted;
 
   private static satisfiesRemoval = ({
