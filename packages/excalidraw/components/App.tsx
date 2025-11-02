@@ -72,7 +72,7 @@ import {
   isToolIcon,
   isWritableElement,
   sceneCoordsToViewportCoords,
-  tupleToCoors,
+  tupleToCoords,
   viewportCoordsToSceneCoords,
   wrapEvent,
   updateObject,
@@ -7619,7 +7619,7 @@ class App extends React.Component<AppProps, AppState> {
     return {
       origin,
       withCmdOrCtrl: event[KEYS.CTRL_OR_CMD],
-      originInGrid: tupleToCoors(
+      originInGrid: tupleToCoords(
         getGridPoint(
           origin.x,
           origin.y,
@@ -7798,7 +7798,7 @@ class App extends React.Component<AppProps, AppState> {
       }
       if (pointerDownState.resize.handleType) {
         pointerDownState.resize.isResizing = true;
-        pointerDownState.resize.offset = tupleToCoors(
+        pointerDownState.resize.offset = tupleToCoords(
           getResizeOffsetXY(
             pointerDownState.resize.handleType,
             selectedElements,
@@ -8930,7 +8930,7 @@ class App extends React.Component<AppProps, AppState> {
       // event handler should hopefully ensure we're already working with
       // the updated state.
       if (pointerDownState.drag.offset === null) {
-        pointerDownState.drag.offset = tupleToCoors(
+        pointerDownState.drag.offset = tupleToCoords(
           getDragOffsetXY(
             this.scene.getSelectedElements(this.state),
             pointerDownState.origin.x,
