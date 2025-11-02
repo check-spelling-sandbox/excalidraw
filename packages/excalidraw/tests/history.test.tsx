@@ -150,16 +150,16 @@ describe("history", () => {
 
       API.setElements([rect]);
 
-      const corrupedEntry = StoreDelta.create(
+      const corruptedEntry = StoreDelta.create(
         ElementsDelta.empty(),
         AppStateDelta.empty(),
       );
 
-      vi.spyOn(corrupedEntry.elements, "applyTo").mockImplementation(() => {
+      vi.spyOn(corruptedEntry.elements, "applyTo").mockImplementation(() => {
         throw new Error("Oh no, I am corrupted!");
       });
 
-      (h.history as any).undoStack.push(corrupedEntry);
+      (h.history as any).undoStack.push(corruptedEntry);
 
       const appState = getDefaultAppState() as AppState;
 
