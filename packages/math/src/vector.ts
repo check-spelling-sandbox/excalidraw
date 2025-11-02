@@ -46,7 +46,7 @@ export function vectorFromPoint<Point extends GlobalPoint | LocalPoint>(
  *
  * @param a One of the vectors to use for the directed area calculation
  * @param b The other vector to use for the directed area calculation
- * @returns The directed area value for the two vectos
+ * @returns The directed area value for the two vectors
  */
 export function vectorCross(a: Vector, b: Vector): number {
   return a[0] * b[1] - b[0] * a[1];
