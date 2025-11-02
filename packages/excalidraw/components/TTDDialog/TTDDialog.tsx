@@ -115,14 +115,14 @@ export const TTDDialogBase = withInternalFallback(
       }));
     };
 
-    const [onTextSubmitInProgess, setOnTextSubmitInProgess] = useState(false);
+    const [onTextSubmitInProgress, setOnTextSubmitInProgress] = useState(false);
     const [rateLimits, setRateLimits] = useAtom(rateLimitsAtom);
 
     const onGenerate = async () => {
       if (
         prompt.length > MAX_PROMPT_LENGTH ||
         prompt.length < MIN_PROMPT_LENGTH ||
-        onTextSubmitInProgess ||
+        onTextSubmitInProgress ||
         rateLimits?.rateLimitRemaining === 0 ||
         // means this is not a text-to-diagram dialog (needed for TS only)
         "__fallback" in rest
@@ -146,7 +146,7 @@ export const TTDDialogBase = withInternalFallback(
       }
 
       try {
-        setOnTextSubmitInProgess(true);
+        setOnTextSubmitInProgress(true);
 
         trackEvent("ai", "generate", "ttd");
 
@@ -205,7 +205,7 @@ export const TTDDialogBase = withInternalFallback(
         }
         setError(new Error(message));
       } finally {
-        setOnTextSubmitInProgess(false);
+        setOnTextSubmitInProgress(false);
       }
     };
 
@@ -293,7 +293,7 @@ export const TTDDialogBase = withInternalFallback(
                     label: "Generate",
                     icon: ArrowRightIcon,
                   }}
-                  onTextSubmitInProgess={onTextSubmitInProgess}
+                  onTextSubmitInProgress={onTextSubmitInProgress}
                   panelActionDisabled={
                     prompt.length > MAX_PROMPT_LENGTH ||
                     rateLimits?.rateLimitRemaining === 0
