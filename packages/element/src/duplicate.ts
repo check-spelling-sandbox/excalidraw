@@ -48,7 +48,7 @@ import type {
 /**
  * Duplicate an element, often used in the alt-drag operation.
  * Note that this method has gotten a bit complicated since the
- * introduction of gruoping/ungrouping elements.
+ * introduction of grouping/ungrouping elements.
  * @param editingGroupId The current group being edited. The new
  *                       element will inherit this group and its
  *                       parents.
