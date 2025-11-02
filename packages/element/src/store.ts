@@ -427,7 +427,7 @@ export class Store {
 }
 
 /**
- * Repsents a change to the store containing changed elements and appState.
+ * Represents a change to the store containing changed elements and appState.
  */
 export class StoreChange {
   // so figuring out what has changed should ideally be just quick reference checks
