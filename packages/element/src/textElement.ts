@@ -415,7 +415,7 @@ export const shouldAllowVerticalAlign = (
   });
 };
 
-export const suppportsHorizontalAlign = (
+export const supportsHorizontalAlign = (
   selectedElements: NonDeletedExcalidrawElement[],
   elementsMap: ElementsMap,
 ) => {
