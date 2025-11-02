@@ -1551,7 +1551,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Remove ga from docker build [#6059](https://github.com/excalidraw/excalidraw/pull/6059)
 
-- Use displayName since name gets stripped off when uglifying/minifiyng in production [#6036](https://github.com/excalidraw/excalidraw/pull/6036)
+- Use displayName since name gets stripped off when uglifying/minifying in production [#6036](https://github.com/excalidraw/excalidraw/pull/6036)
 
 - Remove background from wysiwyg when editing arrow label [#6033](https://github.com/excalidraw/excalidraw/pull/6033)
 
