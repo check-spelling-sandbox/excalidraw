@@ -877,7 +877,7 @@ export const useHandleLibrary = (
                     `couldn't delete legacy library data: ${error.message}`,
                   );
                 }
-                // migration suceeded, load migrated data
+                // migration succeeded, load migrated data
                 return nextItems;
               } catch (error: any) {
                 console.error(
