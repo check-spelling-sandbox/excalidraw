@@ -808,7 +808,7 @@ export const useHandleLibrary = (
       optsRef.current.getInitialLibraryItems
     ) {
       console.warn(
-        "useHandleLibrar `opts.getInitialLibraryItems` is deprecated. Use `opts.adapter` instead.",
+        "useHandleLibrary `opts.getInitialLibraryItems` is deprecated. Use `opts.adapter` instead.",
       );
 
       Promise.resolve(optsRef.current.getInitialLibraryItems())
