@@ -61,7 +61,7 @@ export const LibraryDropdownMenuButton: React.FC<{
 
   const renderRemoveLibAlert = () => {
     const content = selectedItems.length
-      ? t("alerts.removeItemsFromsLibrary", { count: selectedItems.length })
+      ? t("alerts.removeItemsFromLibrary", { count: selectedItems.length })
       : t("alerts.resetLibrary");
     const title = selectedItems.length
       ? t("confirmDialog.removeItemsFromLib")
