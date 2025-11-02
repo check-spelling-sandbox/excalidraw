@@ -4324,7 +4324,7 @@ class App extends React.Component<AppProps, AppState> {
     // squash all deltas together, starting with a fresh new delta instance
     const aggregatedDelta = StoreDelta.squash(...deltas);
 
-    // create new instance of elements map & appState, so we don't accidentaly mutate existing ones
+    // create new instance of elements map & appState, so we don't accidentally mutate existing ones
     const nextAppState = { ...this.state };
     const nextElements = new Map(
       this.scene.getElementsMapIncludingDeleted(),
