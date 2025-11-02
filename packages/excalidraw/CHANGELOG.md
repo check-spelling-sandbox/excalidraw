@@ -1683,7 +1683,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Enter and Exit line editor via context menu [#5719](https://github.com/excalidraw/excalidraw/pull/5719)
 
-- Further reduce darkmode init flash [#5701](https://github.com/excalidraw/excalidraw/pull/5701)
+- Further reduce dark mode init flash [#5701](https://github.com/excalidraw/excalidraw/pull/5701)
 
 - Support segment midpoints in line editor [#5641](https://github.com/excalidraw/excalidraw/pull/5641)
 
