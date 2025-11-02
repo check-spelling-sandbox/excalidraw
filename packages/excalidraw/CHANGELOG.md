@@ -1017,7 +1017,7 @@ define: {
 
 - Overwrite confirmation dialogs [#6658](https://github.com/excalidraw/excalidraw/pull/6658)
 
-- Simple analitycs [#6683](https://github.com/excalidraw/excalidraw/pull/6683)
+- Simple analytics [#6683](https://github.com/excalidraw/excalidraw/pull/6683)
 
 - Introduce frames [#6123](https://github.com/excalidraw/excalidraw/pull/6123)
 
