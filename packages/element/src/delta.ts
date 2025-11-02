@@ -690,13 +690,13 @@ export class AppStateDelta implements DeltaContainer<AppState> {
             : appState.selectedLinearElement,
       };
 
-      const constainsVisibleChanges = this.filterInvisibleChanges(
+      const containsVisibleChanges = this.filterInvisibleChanges(
         appState,
         nextAppState,
         nextElements,
       );
 
-      return [nextAppState, constainsVisibleChanges];
+      return [nextAppState, containsVisibleChanges];
     } catch (e) {
       // shouldn't really happen, but just in case
       console.error(`Couldn't apply appstate change`, e);
