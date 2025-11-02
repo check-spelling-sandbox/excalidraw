@@ -39,7 +39,7 @@ export const subsetToBase64 = async (
 /**
  * Used by browser (worker thread) and as part of `subsetToBase64`, to subset the font based on the passed codepoints.
  *
- * @eturns woff2 font as an ArrayBuffer, to avoid copying large strings between worker threads and the main thread.
+ * @returns woff2 font as an ArrayBuffer, to avoid copying large strings between worker threads and the main thread.
  */
 export const subsetToBinary = async (
   arrayBuffer: ArrayBuffer,
