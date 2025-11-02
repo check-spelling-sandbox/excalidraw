@@ -341,11 +341,11 @@ describe("rectangle", () => {
 
   it("flips a rotated rectangle vertically correctly", async () => {
     const originalAngle = (3 * Math.PI) / 4;
-    const expectedAgnle = (5 * Math.PI) / 4;
+    const expectedAngle = (5 * Math.PI) / 4;
 
     createAndSelectOneRectangle(originalAngle);
 
-    await checkRotatedVerticalFlip(expectedAgnle);
+    await checkRotatedVerticalFlip(expectedAngle);
   });
 });
 
