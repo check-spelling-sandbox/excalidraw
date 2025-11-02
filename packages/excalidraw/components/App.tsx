@@ -376,7 +376,7 @@ import {
 import { fileOpen } from "../data/filesystem";
 import {
   showHyperlinkTooltip,
-  hideHyperlinkToolip,
+  hideHyperlinkTooltip,
   Hyperlink,
 } from "../components/hyperlink/Hyperlink";
 
@@ -6146,7 +6146,7 @@ class App extends React.Component<AppProps, AppState> {
       this.editorInterface.formFactor === "phone",
     );
     if (lastPointerDownHittingLinkIcon && lastPointerUpHittingLinkIcon) {
-      hideHyperlinkToolip();
+      hideHyperlinkTooltip();
       let url = this.hitLinkElement.link;
       if (url) {
         url = normalizeLink(url);
@@ -6695,7 +6695,7 @@ class App extends React.Component<AppProps, AppState> {
         this.scene.getNonDeletedElementsMap(),
       );
     } else {
-      hideHyperlinkToolip();
+      hideHyperlinkTooltip();
       if (
         hitElement &&
         (hitElement.link || isEmbeddableElement(hitElement)) &&

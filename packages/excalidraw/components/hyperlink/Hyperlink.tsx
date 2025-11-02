@@ -440,7 +440,7 @@ const renderTooltip = (
 
   IS_HYPERLINK_TOOLTIP_VISIBLE = true;
 };
-export const hideHyperlinkToolip = () => {
+export const hideHyperlinkTooltip = () => {
   if (HYPERLINK_TOOLTIP_TIMEOUT_ID) {
     clearTimeout(HYPERLINK_TOOLTIP_TIMEOUT_ID);
   }
