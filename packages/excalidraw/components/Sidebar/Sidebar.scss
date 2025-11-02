@@ -158,7 +158,7 @@
       gap: 0;
       padding: $padding;
       // offset by padding + border to vertically center the list with sibling
-      // buttons (both from top and bototm, due to flex layout)
+      // buttons (both from top and bottom, due to flex layout)
       margin-top: -#{$padding + $border};
       margin-bottom: -#{$padding + $border};
       border: $border solid var(--sidebar-border-color);
