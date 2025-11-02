@@ -67,7 +67,7 @@ export const ellipseIncludesPoint = <Point extends GlobalPoint | LocalPoint>(
  * @param point The point to test
  * @param ellipse The ellipse to compare against
  * @param threshold The distance to consider a point close enough to be "on" the outline
- * @returns TRUE if the point is on the ellise outline
+ * @returns TRUE if the point is on the ellipse outline
  */
 export const ellipseTouchesPoint = <Point extends GlobalPoint | LocalPoint>(
   point: Point,
