@@ -48,7 +48,7 @@ export const distanceToElement = (
     case "line":
     case "arrow":
     case "freedraw":
-      return distanceToLinearOrFreeDraElement(element, p);
+      return distanceToLinearOrFreeDrawElement(element, p);
   }
 };
 
@@ -131,7 +131,7 @@ const distanceToEllipseElement = (
   );
 };
 
-const distanceToLinearOrFreeDraElement = (
+const distanceToLinearOrFreeDrawElement = (
   element: ExcalidrawLinearElement | ExcalidrawFreeDrawElement,
   p: GlobalPoint,
 ) => {
