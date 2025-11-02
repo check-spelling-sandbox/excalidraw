@@ -184,11 +184,11 @@ export const TTDDialogBase = withInternalFallback(
           trackEvent("ai", "mermaid parse success", "ttd");
         } catch (error: any) {
           console.info(
-            `%cTTD mermaid render errror: ${error.message}`,
+            `%cTTD mermaid render error: ${error.message}`,
             "color: red",
           );
           console.info(
-            `>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nTTD mermaid definition render errror: ${error.message}`,
+            `>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nTTD mermaid definition render error: ${error.message}`,
             "color: yellow",
           );
           trackEvent("ai", "mermaid parse failed", "ttd");
