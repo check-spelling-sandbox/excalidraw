@@ -380,7 +380,7 @@ export const ROUNDNESS = {
   PROPORTIONAL_RADIUS: 2,
 
   // Current default algorithm for rectangles, using fixed pixel radius.
-  // It's working similarly to a regular border-radius, but attemps to make
+  // It's working similarly to a regular border-radius, but attempts to make
   // radius visually similar across differnt element sizes, especially
   // very large and very small elements.
   //
