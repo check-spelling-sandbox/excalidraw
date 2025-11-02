@@ -758,7 +758,7 @@ const arrowBarToTopJSX = (
   </g>
 );
 
-const arrownNarrowUpJSX = (
+const arrowNarrowUpJSX = (
   <g strokeWidth={1.5}>
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M12 5l0 14" />
@@ -767,9 +767,9 @@ const arrownNarrowUpJSX = (
   </g>
 );
 
-export const BringForwardIcon = createIcon(arrownNarrowUpJSX, tablerIconProps);
+export const BringForwardIcon = createIcon(arrowNarrowUpJSX, tablerIconProps);
 
-export const SendBackwardIcon = createIcon(arrownNarrowUpJSX, {
+export const SendBackwardIcon = createIcon(arrowNarrowUpJSX, {
   ...tablerIconProps,
   style: {
     transform: "rotate(180deg)",
