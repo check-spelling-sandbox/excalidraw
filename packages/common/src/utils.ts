@@ -670,7 +670,7 @@ export const getUpdatedTimestamp = () => (isTestEnv() ? 1 : Date.now());
 
 /**
  * Transforms array of objects containing `id` attribute,
- * or array of ids (strings), into a Map, keyd by `id`.
+ * or array of ids (strings), into a Map, keyed by `id`.
  */
 export const arrayToMap = <T extends { id: string } | string>(
   items: readonly T[] | Map<string, T>,
