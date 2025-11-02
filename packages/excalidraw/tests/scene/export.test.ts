@@ -408,7 +408,7 @@ describe("exporting frames", () => {
       // frames themselves should be exported when multiple frames selected
       expect(svg.querySelector(`[data-id="${frame1.id}"]`)).not.toBeNull();
       expect(svg.querySelector(`[data-id="${frame2.id}"]`)).not.toBeNull();
-      // children should be epxorted
+      // children should be exported
       expect(svg.querySelector(`[data-id="${frame1Child.id}"]`)).not.toBeNull();
       expect(svg.querySelector(`[data-id="${frame2Child.id}"]`)).not.toBeNull();
       // overlapping elements or non-overlapping elements should not be exported
@@ -511,7 +511,7 @@ describe("exporting frames", () => {
 
       // frame shouldn't be exported
       expect(svg.querySelector(`[data-id="${frame1.id}"]`)).toBeNull();
-      // frame1 child should be epxorted
+      // frame1 child should be exported
       expect(svg.querySelector(`[data-id="${frame1Child.id}"]`)).not.toBeNull();
       // frame2 child should not be exported even if it physically overlaps with
       // frame1
