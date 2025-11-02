@@ -955,7 +955,7 @@ define: {
 
 ### Fixes
 
-- More eye-droper fixes [#7019](https://github.com/excalidraw/excalidraw/pull/7019)
+- More eye-dropper fixes [#7019](https://github.com/excalidraw/excalidraw/pull/7019)
 
 ### Refactor
 
