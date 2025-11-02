@@ -17,7 +17,7 @@ export const withBatchedUpdates = <
   }) as TFunction;
 
 /**
- * barches React state updates and throttles the calls to a single call per
+ * batches React state updates and throttles the calls to a single call per
  * animation frame
  */
 export const withBatchedUpdatesThrottled = <
