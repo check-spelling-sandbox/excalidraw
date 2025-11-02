@@ -160,7 +160,7 @@ export const syncMovedIndices = (
     const elementsMap = arrayToMap(elements);
     const indicesGroups = getMovedIndicesGroups(elements, movedElements);
 
-    // try generatating indices, throws on invalid movedElements
+    // try generating indices, throws on invalid movedElements
     const elementsUpdates = generateIndices(elements, indicesGroups);
     const elementsCandidates = elements.map((x) => {
       const elementUpdates = elementsUpdates.get(x);
