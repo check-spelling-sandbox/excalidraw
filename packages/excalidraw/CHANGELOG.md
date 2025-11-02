@@ -637,7 +637,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - External link not opening [#7859](https://github.com/excalidraw/excalidraw/pull/7859)
 
-- Add safe check for arrow points length in tranformToExcalidrawElements [#7863](https://github.com/excalidraw/excalidraw/pull/7863)
+- Add safe check for arrow points length in transformToExcalidrawElements [#7863](https://github.com/excalidraw/excalidraw/pull/7863)
 
 - Import [#7869](https://github.com/excalidraw/excalidraw/pull/7869)
 
