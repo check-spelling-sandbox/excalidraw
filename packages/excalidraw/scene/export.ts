@@ -373,7 +373,7 @@ export const exportToSvg = async (
     try {
       encodeSvgBase64Payload({
         metadataElement,
-        // when embedding scene, we want to embed the origionally supplied
+        // when embedding scene, we want to embed the originally supplied
         // elements which don't contain the temp frame labels.
         // But it also requires that the exportToSvg is being supplied with
         // only the elements that we're exporting, and no extra.
