@@ -114,7 +114,7 @@ export const isLatinChar = (key: string) => /^[a-z]$/.test(key.toLowerCase());
  * Greek                 | [KeyZ] |  ζ  | z with cmd; also ζ is Greek equivalent of z
  * Hebrew                | [KeyZ] |  ז  | z with cmd; also ז is Hebrew equivalent of z
  * Pinyin - Simplified   |  KeyZ  | [z] | due to IME
- * Cangije - Traditional | [KeyZ] |  重 | z with cmd
+ * Cangjie - Traditional | [KeyZ] |  重 | z with cmd
  * Japanese              | [KeyZ] |  つ | z with cmd
  * 2-Set Korean          | [KeyZ] |  ㅋ | z with cmd
  *
