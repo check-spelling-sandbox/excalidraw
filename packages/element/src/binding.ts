@@ -2139,7 +2139,7 @@ export class BindableElement {
    * - iterates through non deleted `boundElements` of the current element
    * - prepares updates to rebind each bound element to the current element or unbind it from `boundElements` in case of conflicts
    *
-   * NOTE: rebind expects that affected elements were previously unbound with `BindaleElement.unbindAffected`
+   * NOTE: rebind expects that affected elements were previously unbound with `BindableElement.unbindAffected`
    */
   public static rebindAffected = (
     elements: ElementsMap,
