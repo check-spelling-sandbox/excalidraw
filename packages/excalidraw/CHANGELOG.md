@@ -243,7 +243,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Box select frame & children to allow resizing at the same time [#9031](https://github.com/excalidraw/excalidraw/pull/9031)
 
-- Allow installing libs from excal github [#9041](https://github.com/excalidraw/excalidraw/pull/9041)
+- Allow installing libs from excali github [#9041](https://github.com/excalidraw/excalidraw/pull/9041)
 
 - Update jotai [#9015](https://github.com/excalidraw/excalidraw/pull/9015)
 
