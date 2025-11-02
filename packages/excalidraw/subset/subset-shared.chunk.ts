@@ -58,7 +58,7 @@ export const subsetToBinary = async (
 };
 
 /**
- * Util for isomoprhic browser (main thread), node and jsdom usage.
+ * Util for isomorphic browser (main thread), node and jsdom usage.
  *
  * Isn't used inside the worker to avoid copying large binary strings (as dataurl) between worker threads and the main thread.
  */
