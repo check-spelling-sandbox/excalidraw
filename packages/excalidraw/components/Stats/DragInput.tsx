@@ -167,7 +167,7 @@ const StatsDragInput = <
   >({});
   callbacksRef.current.handleInputValue = handleInputValue;
 
-  // make sure that clicking on canvas (which umounts the component)
+  // make sure that clicking on canvas (which unmounts the component)
   // updates current input value (blur isn't triggered)
   useEffect(() => {
     const input = inputRef.current;
