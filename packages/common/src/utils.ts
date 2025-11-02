@@ -1181,7 +1181,7 @@ type Unbrand<T> = T extends Map<infer E, infer F>
 
 /**
  * Makes type into a branded type, ensuring that value is assignable to
- * the base ubranded type. Optionally you can explicitly supply current value
+ * the base unbranded type. Optionally you can explicitly supply current value
  * type to combine both (useful for composite branded types. Make sure you
  * compose branded types which are not composite themselves.)
  */
