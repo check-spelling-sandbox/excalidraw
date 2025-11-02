@@ -3983,7 +3983,7 @@ describe("history", () => {
           elements: [
             newElementWith(h.elements[0], {
               boundElements: [{ id: remoteText.id, type: "text" }],
-              isDeleted: false, // purposefully undeleting, mimicing concurrent update
+              isDeleted: false, // purposefully undeleting, mimicking concurrent update
             }),
             h.elements[1],
             // rebinding the container with a new text element!
