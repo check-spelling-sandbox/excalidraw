@@ -1135,13 +1135,13 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
   private static validate(
     elementsDelta: ElementsDelta,
     type: "added" | "removed" | "updated",
-    satifiesSpecialInvariants: (delta: Delta<ElementPartial>) => boolean,
+    satisfiesSpecialInvariants: (delta: Delta<ElementPartial>) => boolean,
   ) {
     for (const [id, delta] of Object.entries(elementsDelta[type])) {
       if (
         !this.satisfiesCommonInvariants(delta) ||
         !this.satisfiesUniqueInvariants(elementsDelta, id) ||
-        !satifiesSpecialInvariants(delta)
+        !satisfiesSpecialInvariants(delta)
       ) {
         console.error(
           `Broken invariant for "${type}" delta, element "${id}", delta:`,
