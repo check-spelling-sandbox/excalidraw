@@ -198,7 +198,7 @@ const Panel = ({
 
   const genericElements = useMemo(() => {
     return conversionType === "generic"
-      ? filterGenericConvetibleElements(elements)
+      ? filterGenericConvertibleElements(elements)
       : [];
   }, [conversionType, elements]);
   const linearElements = useMemo(() => {
@@ -437,7 +437,7 @@ export const convertElementTypes = (
 
   if (conversionType === "generic") {
     const convertibleGenericElements =
-      filterGenericConvetibleElements(selectedElements);
+      filterGenericConvertibleElements(selectedElements);
 
     const sameType = convertibleGenericElements.every(
       (element) => element.type === convertibleGenericElements[0].type,
@@ -664,12 +664,12 @@ const isEligibleLinearElement = (element: ExcalidrawElement) => {
 
 const toCacheKey = (
   elementId: ExcalidrawElement["id"],
-  convertitleType: ConvertibleTypes,
+  convertibleType: ConvertibleTypes,
 ) => {
-  return `${elementId}:${convertitleType}` as CacheKey;
+  return `${elementId}:${convertibleType}` as CacheKey;
 };
 
-const filterGenericConvetibleElements = (elements: ExcalidrawElement[]) =>
+const filterGenericConvertibleElements = (elements: ExcalidrawElement[]) =>
   elements.filter((element) => isConvertibleGenericType(element.type)) as Array<
     | ExcalidrawRectangleElement
     | ExcalidrawDiamondElement
