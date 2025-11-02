@@ -911,7 +911,7 @@ describe("textWysiwyg", () => {
       ).toEqual(FONT_FAMILY["Comic Shanns"]);
     });
 
-    it("should wrap text and vertcially center align once text submitted", async () => {
+    it("should wrap text and vertically center align once text submitted", async () => {
       expect(h.elements.length).toBe(1);
 
       Keyboard.keyDown(KEYS.ENTER);
