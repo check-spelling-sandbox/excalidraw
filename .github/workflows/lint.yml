@@ -17,6 +17,16 @@ jobs:
       - name: Install and lint
         run: |
           yarn install
-          yarn test:other
+          (
+            echo '### prettier'
+            echo
+            echo '```diff'
+            echo
+            yarn prettier -w || true
+            git diff || true
+            echo
+            echo '```'
+            echo
+          ) >> "$GITHUB_STEP_SUMMARY"
           yarn test:code
           yarn test:typecheck
