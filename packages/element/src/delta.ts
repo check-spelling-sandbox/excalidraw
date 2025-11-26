@@ -1292,11 +1292,11 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
   }
 
   /**
-   * Update delta/s based on the existing elements.
+   * Update delta(s) based on the existing elements.
    *
    * @param nextElements current elements
    * @param modifierOptions defines which of the delta (`deleted` or `inserted`) will be updated
-   * @returns new instance with modified delta/s
+   * @returns new instance with modified delta(s)
    */
   public applyLatestChanges(
     prevElements: SceneElementsMap,
