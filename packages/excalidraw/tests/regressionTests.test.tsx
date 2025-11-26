@@ -971,7 +971,7 @@ describe("regression tests", () => {
   );
 
   it(
-    "given a selected element A and a not selected element B with higher z-index than A " +
+    "given a selected element A and an unselected element B with higher z-index than A " +
       "and given B partially overlaps A " +
       "when there's a shift-click on the overlapped section B is added to the selection",
     () => {
