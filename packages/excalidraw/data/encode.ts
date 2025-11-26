@@ -151,7 +151,7 @@ type FileEncodingInfo = {
   /* version 2 is the version we're shipping the initial image support with.
     version 1 was a PR version that a lot of people were using anyway.
     Thus, if there are issues we can check whether they're not using the
-    unoffic version */
+    unofficial version */
   version: 1 | 2;
   compression: "pako@1" | null;
   encryption: "AES-GCM" | null;
