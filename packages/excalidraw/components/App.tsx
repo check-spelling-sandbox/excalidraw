@@ -3510,7 +3510,7 @@ class App extends React.Component<AppProps, AppState> {
       .split(/\n+/)
       .map((s) => s.trim())
       .filter(Boolean);
-    const embbeddableUrls = nonEmptyLines
+    const embeddableUrls = nonEmptyLines
       .map((str) => maybeParseEmbedSrc(str))
       .filter(
         (string) =>
@@ -3521,11 +3521,11 @@ class App extends React.Component<AppProps, AppState> {
 
     if (
       !isPlainPaste &&
-      embbeddableUrls.length > 0 &&
-      embbeddableUrls.length === nonEmptyLines.length
+      embeddableUrls.length > 0 &&
+      embeddableUrls.length === nonEmptyLines.length
     ) {
       const embeddables: NonDeleted<ExcalidrawEmbeddableElement>[] = [];
-      for (const url of embbeddableUrls) {
+      for (const url of embeddableUrls) {
         const prevEmbeddable: ExcalidrawEmbeddableElement | undefined =
           embeddables[embeddables.length - 1];
         const embeddable = this.insertEmbeddableElement({
