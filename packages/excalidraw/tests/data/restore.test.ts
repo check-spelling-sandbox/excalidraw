@@ -913,7 +913,7 @@ describe("repairing bindings", () => {
     ]);
   });
 
-  it("should remove containerId if container not exists when repair is true", () => {
+  it("should remove containerId if no container exists when repair is true", () => {
     const boundElement = API.createElement({
       type: "text",
       containerId: "non-existent",
