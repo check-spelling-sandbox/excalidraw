@@ -26,25 +26,29 @@ el\.id === "[_\w]{21}"
 
 rather than `.*`
 
+NaN(?=[A-Z])
+
+\bk: "\w+"
+
 # Automatically suggested patterns
 
-# hit-count: 1521 file-count: 109
+# hit-count: 1475 file-count: 103
 # https/http/file urls
 (?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/*%?=~_|!:,.;]+[-A-Za-z0-9+&@#/*%=~_|]
 
-# hit-count: 925 file-count: 330
+# hit-count: 921 file-count: 331
 # node packages
 (["'])@[^/'" ]+/[^/'" ]+\g{-1}
 
-# hit-count: 537 file-count: 281
+# hit-count: 528 file-count: 276
 # imports
 ^import\s+(?:(?:static|type)\s+|)(?:[\w.]|\{\s*\w*?(?:,\s*(?:\w*|\*))+\s*\})+(?:\s+from (['"]).*?\g{-1}|)
 
-# hit-count: 132 file-count: 32
+# hit-count: 123 file-count: 30
 # hex digits including css/html color classes:
 (?:[\\0][xX]|\\u\{?|[uU]\+|#x?|%23|&H)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
 
-# hit-count: 123 file-count: 20
+# hit-count: 63 file-count: 10
 # in check-spelling@v0.0.22+, printf markers aren't automatically consumed
 # printf markers
 (?<!\\)\\[nrt](?=[a-z]{2,})
@@ -57,22 +61,26 @@ rather than `.*`
 # uuid:
 \b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
 
-# hit-count: 13 file-count: 6
-# IServiceProvider / isAThing
-(?:(?:\b|_|(?<=[a-z]))I|(?:\b|_)(?:nsI|isA))(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
+# hit-count: 19 file-count: 11
+# hex runs
+\b(?=(?:[a-fA-F]{0,2}\d)*[a-fA-F]{3})[0-9a-fA-F]{16,}\b
 
-# hit-count: 8 file-count: 7
+# hit-count: 11 file-count: 4
+# IServiceProvider / isAThing
+(?:(?:\b|_|(?<=[a-z]))[IT]|(?:\b|_)(?:nsI|isA))(?=(?:[A-Z][a-z]{2,})+(?:[A-Z\d]|\b))
+
+# hit-count: 7 file-count: 6
 # data url in quotes
 ([`'"])data:(?:[^ `'"].*?|)(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,}).*\g{-1}
-
-# hit-count: 6 file-count: 5
-# css fonts
-\bfont(?:-family|):[^;}]+
 
 # hit-count: 6 file-count: 3
 # JavaScript regular expressions
 # javascript test regex
 /.{3,}/[gim]*\.test\(
+
+# hit-count: 5 file-count: 4
+# css fonts
+\bfont(?:-family|):[^;}]+
 
 # hit-count: 5 file-count: 1
 # copyright
@@ -82,29 +90,21 @@ Copyright (?:\([Cc]\)|)(?:[-\d, ]|and)+(?: [A-Z][a-z]+ [A-Z][a-z]+,?)+
 # GitHub actions
 \buses:\s+(['"]?)[-\w.]+/[-\w./]+@[-\w.]+\g{-1}
 
-# hit-count: 4 file-count: 3
-# hex runs
-\b(?=(?:[a-fA-F]{0,2}\d)*[a-fA-F]{3})[0-9a-fA-F]{16,}\b
-
-# hit-count: 3 file-count: 2
+# hit-count: 2 file-count: 1
 # javascript replace regex
 \.replace\(/[^/\s"]{3,}/[gim]*\s*,
 
-# hit-count: 3 file-count: 2
-# assign regex
-= /[^*].*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/[gim]*(?=\W|$)
-
-# hit-count: 2 file-count: 2
-# Google Cloud regions
-(?:us|(?:north|south)america|europe|asia|australia|me|africa)-(?:north|south|east|west|central){1,2}\d+
-
-# hit-count: 2 file-count: 2
-# base64 encoded pkcs
-\bMII[-a-zA-Z=;:/0-9+]+
+# hit-count: 1 file-count: 1
+# sha-... -- uses a fancy capture
+(\\?['"]|&quot;)[0-9a-f]{40,}\g{-1}
 
 # hit-count: 1 file-count: 1
 # javascript match regex
 \.match\(/[^/\s"]{3,}/[gim]*\s*
+
+# hit-count: 1 file-count: 1
+# assign regex
+= /[^*].*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/[gim]*(?=\W|$)
 
 # hit-count: 1 file-count: 1
 # Compiler flags (Unix, Java/Scala)

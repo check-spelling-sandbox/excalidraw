@@ -96,13 +96,13 @@
 (?i)(?<!posteriori)\sand priori\s
 
 # Should be `a`
-\san (?=(?:[b-df-gjklpqtvwz]|h(?!our|s[lv]|tml|ttp|ref)|n(?!grok|pm)|r(?!c)|s(?!sh|vg))[a-z]|x(?!ml))
+\san (?=(?:[b-df-gjklpqtvwz]|h(?!our|s[lv]|tml|ttp|ref)|n(?!grok|pm)|r(?!c)|s(?!s[ho]|vg))[a-z]|x(?!ml))
 
 # Articles generally shouldn't be used without a noun and a verb
 # - Perhaps you're missing a verb between the noun and the second article.
 # - Or, perhaps you should remove the first verb and treat the intervening word as a verb?
 # - In some cases you should add a `,` between the noun and the second article.
-\s(?:an?|the)\s(?!wh|how\b)[A-Za-z][a-z]+[a-qs-z]\s(?:an?|the)\s
+\s(?:an?|the)\s(?!wh|how\b)[A-Za-z][a-z]+[a-qs-z]\s(?:a(?! bit\b)n?|the(?! same))\s
 
 # Should only be one of `a`, `an`, or `the`
 \b(?:(?:an?|the)\s+){2,}\b
@@ -128,10 +128,10 @@
 \b[Pp]lease(?:, do|) also\b
 
 # Should be `an`
-#(?<!\b[Ii] )(?<![-.])(?<!\d\s?)\bam\b(?!/pm|")
+#(?<!\b[Ii] )(?<![-.])(?<!\d\s?)\bam\b(?!/pm|[:")])
 
 # Should be `an`
-\sa(?= (?:a(?!nd\s|s\s)|e(?!u)|i(?![ns]\s)|o(?!nc?e)|u(?!biquitous|kr|n[ai]|r[ael]|s[aeiu]|tf\d*|til|topia|vula|v\b)|y(?!arn|ear|oga|y)))
+\sa(?= (?:a(?!nd\s|s\s)|e(?!u)|i(?![ns]\s)|o(?!nc?e)|u(?!biquitous|int|kr|n[ai]|r[ael]|s[aeiu]|tf\d*|til|topia|vula|v\b)|y(?!arn|ear|oga|y)))
 
 # Should be `anymore`
 \bany more[,.]
@@ -200,6 +200,9 @@
 # Should be `chart`
 (?i)\bhelm\b.*\bchard\b
 
+# Should be `code`
+(?<=\bof )a code(?= that\b)
+
 # Should be `counter-intuitive`
 \bcounter intuitive\b
 
@@ -241,6 +244,9 @@
 
 # Should be `equal to`, `equal width`, or reworded
 \bequal with\b(?! (?:no|respect))
+
+# Should be `eta` or `calculate eta`
+(?i)\bestimated? eta\b
 
 # Should be `ECMA` 262 (JavaScript)
 (?i)\bTS\/EMCA\b|\bEMCA(?: \d|\s*Script)|\bEMCA\b(?=.*\bTS\b)
@@ -369,7 +375,7 @@ CLoud
 \bHomeBrew\b
 
 # Should be `ID` (unless it's a flag/property/RCS variable)
-(?<![-\.$])\bId\b(?![(=:])
+#(?<![-\.$])\bId\b(?![(=:])
 
 # Should be `in front of`
 \bin from of\b
@@ -398,16 +404,25 @@ CLoud
 (?<![.'])\bits['’]
 
 # Should be `its`
+(?<=\bin )it's\b
+
+# Should be `its`
 \bit's(?= (?:child|only purpose|own(?:er|)|parent|sibling)\b)
 
 # Should be `its`
 (?<!since )\bit's(?= data\b)
+
+# Should be `... its`
+\w{2}(?<!\b(?:case|fail|mean|perhap|purpose|sometime|unles|ye))s it's\b(?! (?:an?|going|not|own|the|\w+ed)\b)
 
 # Should be `for its` (possessive) or `because it is`
 \bfor it(?:'s| is)\b
 
 # Should be `lends`
 \bleads(?= credence)
+
+# Should be `few times` or `little time`
+(?<=\bvery )few time\b
 
 # Should be `log in`
 \blogin to the
@@ -554,6 +569,12 @@ CLoud
 # Should be `state`
 \bsate(?=\b|[A-Z])|(?<=[a-z])Sate(?=\b|[A-Z])|(?<=[A-Z]{2})Sate(?=\b|[A-Z])
 
+# Should be `succeed` (or `successfully`)
+(?i)(?<=\bshould )success\b
+
+# Should be `times`
+(?<=\ba few )time\b
+
 # Should be `that`
 \b[Tt]hat's(?= would)
 
@@ -586,6 +607,9 @@ CLoud
 
 # Should be `did not exist`
 \bwere not existent\b
+
+# Should be `not exist` or `nonexistent`
+(?<!(?i)IF|WHERE )\bnot exists\b
 
 # Should be `nonexistent`
 \bnon existing\b

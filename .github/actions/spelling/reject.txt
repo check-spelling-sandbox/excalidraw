@@ -14,7 +14,10 @@ Devinn?[ae]
 devisals?
 devisors?
 diables?
+hasta?
+hastat.*
 immediatly
+linge
 oer
 Sorce
 [Ss]pae.*

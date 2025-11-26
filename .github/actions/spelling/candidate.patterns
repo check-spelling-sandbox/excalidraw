@@ -19,7 +19,7 @@ Copyright (?:\([Cc]\)|)(?:[-\d, ]|and)+(?: [A-Z][a-z]+ [A-Z][a-z]+,?)+
 index (?:[0-9a-z]{7,40},|)[0-9a-z]{7,40}\.\.[0-9a-z]{7,40}
 
 # file permissions
-['"`\s][-bcdLlpsw](?:[-r][-w][-Ssx]){2}[-r][-w][-SsTtx]\+?['"`\s]
+['"`\s](?!-+\s)[-bcdLlpsw](?:[-r][-w][-Ssx]){2}[-r][-w][-SsTtx]\+?['"`\s]
 
 # css fonts
 \bfont(?:-family|):[^;}]+
@@ -496,13 +496,19 @@ Name\[[^\]]+\]=.*
 \bh1:\S+
 
 # golang print-f-style functions
-(?i)(?<=append|comma|debug|equal|err|error|info|log|name|print|skip|scan|trace|true|warn|warning|wrap|write)f[ (]
+(?i)(?<=append|comma|debug|equal|err|error|exit|fatal|format|info|log|name|panic|print|skip|scan|string|trace|true|warn|warning|wrap|write)(?:f|ln)[ (]
+
+# golang regular expression
+\br".+?"
 
 # imports
 ^import\s+(?:(?:static|type)\s+|)(?:[\w.]|\{\s*\w*?(?:,\s*(?:\w*|\*))+\s*\})+(?:\s+from (['"]).*?\g{-1}|)
 
 # scala modules
 ("[^"]+"\s*%%?\s*){2,3}"[^"]+"
+
+# Dataframes / NumPy
+\b(?:df|np)\.\w{3,}
 
 # container images
 #image: [-\w./:@]+
@@ -568,7 +574,7 @@ perl(?:\s+-[a-zA-Z]\w*)+
 regexp?\.MustCompile\((?:`[^`]*`|".*"|'.*')\)
 
 # regex choice
-#\((?:\?:|)[^)|]+\|[^)|][^)]*\)
+#\((?:\?:|)[^)|]+(?<! )\|(?!(?:jq|xargs)\b)[^)| ][^)]*\)
 
 # proto
 ^\s*(\w+)\s\g{-1} =
@@ -682,9 +688,9 @@ systemd.*?running in system mode \([-+].*\)$
 
 # Non-English
 # Even repositories expecting pure English content can unintentionally have Non-English content... People will occasionally mistakenly enter [homoglyphs](https://en.wikipedia.org/wiki/Homoglyph) which are essentially typos, and using this pattern will mean check-spelling will not complain about them.
-#
+# .
 # If the content to be checked should be written in English and the only Non-English items will be people's names, then you can consider adding this.
-#
+# .
 # Alternatively, if you're using check-spelling v0.0.25+, and you would like to _check_ the Non-English content for spelling errors, you can. For information on how to do so, see:
 # https://docs.check-spelling.dev/Feature:-Configurable-word-characters.html#unicode
 [a-zA-Z]*[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*|[a-zA-Z]{3,}[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]|[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3,}
