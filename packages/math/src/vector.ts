@@ -1,7 +1,7 @@
 import type { GlobalPoint, LocalPoint, Vector } from "./types";
 
 /**
- * Create a vector from the x and y coordiante elements.
+ * Create a vector from the x and y coordinate elements.
  *
  * @param x The X aspect of the vector
  * @param y T Y aspect of the vector
@@ -20,7 +20,7 @@ export function vector(
  * Turn a point into a vector with the origin point.
  *
  * @param p The point to turn into a vector
- * @param origin The origin point in a given coordiante system
+ * @param origin The origin point in a given coordinate system
  * @param threshold The threshold to consider the vector as 'undefined'
  * @param defaultValue The default value to return if the vector is 'undefined'
  * @returns The created vector from the point and the origin or default
@@ -46,7 +46,7 @@ export function vectorFromPoint<Point extends GlobalPoint | LocalPoint>(
  *
  * @param a One of the vectors to use for the directed area calculation
  * @param b The other vector to use for the directed area calculation
- * @returns The directed area value for the two vectos
+ * @returns The directed area value for the two vectors
  */
 export function vectorCross(a: Vector, b: Vector): number {
   return a[0] * b[1] - b[0] * a[1];
@@ -118,7 +118,7 @@ export function vectorScale(v: Vector, scalar: number): Vector {
 }
 
 /**
- * Calculates the sqare magnitude of a vector. Use this if you compare
+ * Calculates the square magnitude of a vector. Use this if you compare
  * magnitudes as it saves you an SQRT.
  *
  * @param v The vector to measure
@@ -139,7 +139,7 @@ export function vectorMagnitude(v: Vector) {
 }
 
 /**
- * Normalize the vector (i.e. make the vector magnitue equal 1).
+ * Normalize the vector (i.e. make the vector magnitude equal 1).
  *
  * @param v The vector to normalize
  * @returns The new normalized vector

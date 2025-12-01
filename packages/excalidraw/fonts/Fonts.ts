@@ -177,7 +177,7 @@ export class Fonts {
     const families = Fonts.getUniqueFamilies(elements);
     const charsPerFamily = Fonts.getCharsPerFamily(elements);
 
-    // for simplicity, assuming we have just one family with the CJK handdrawn fallback
+    // for simplicity, assuming we have just one family with the CJK hand-drawn fallback
     const familyWithCJK = families.find((x) =>
       getFontFamilyFallbacks(x).includes(CJK_HAND_DRAWN_FALLBACK_FONT),
     );
@@ -188,11 +188,11 @@ export class Fonts {
       if (containsCJK(characters)) {
         const family = FONT_FAMILY_FALLBACKS[CJK_HAND_DRAWN_FALLBACK_FONT];
 
-        // adding the same characters to the CJK handrawn family
+        // adding the same characters to the CJK hand-drawn family
         charsPerFamily[family] = new Set(characters);
 
         // the order between the families and fallbacks is important, as fallbacks need to be defined first and in the reversed order
-        // so that they get overriden with the later defined font faces, i.e. in case they share some codepoints
+        // so that they get overridden with the later defined font faces, i.e. in case they share some codepoints
         families.unshift(FONT_FAMILY_FALLBACKS[CJK_HAND_DRAWN_FALLBACK_FONT]);
       }
     }
@@ -320,7 +320,7 @@ export class Fonts {
    *
    * @param family font family
    * @param metadata font metadata
-   * @param fontFacesDecriptors font faces descriptors
+   * @param fontFacesDescriptors font faces descriptors
    */
   private static register(
     this:
@@ -333,7 +333,7 @@ export class Fonts {
         },
     family: string,
     metadata: FontMetadata,
-    ...fontFacesDecriptors: ExcalidrawFontFaceDescriptor[]
+    ...fontFacesDescriptors: ExcalidrawFontFaceDescriptor[]
   ) {
     // TODO: likely we will need to abandon number value in order to support custom fonts
     const fontFamily =
@@ -345,7 +345,7 @@ export class Fonts {
     if (!registeredFamily) {
       this.registered.set(fontFamily, {
         metadata,
-        fontFaces: fontFacesDecriptors.map(
+        fontFaces: fontFacesDescriptors.map(
           ({ uri, descriptors }) =>
             new ExcalidrawFontFace(family, uri, descriptors),
         ),
@@ -384,7 +384,7 @@ export class Fonts {
     init("Cascadia", ...CascadiaFontFaces);
     init("Comic Shanns", ...ComicShannsFontFaces);
     init("Excalifont", ...ExcalifontFontFaces);
-    // keeping for backwards compatibility reasons, uses system font (Helvetica on MacOS, Arial on Win)
+    // keeping for backwards compatibility reasons, uses system font (Helvetica on macOS, Arial on Win)
     init("Helvetica", ...HelveticaFontFaces);
     // used for server-side pdf & png export instead of helvetica (technically does not need metrics, but kept in for consistency)
     init("Liberation Sans", ...LiberationFontFaces);

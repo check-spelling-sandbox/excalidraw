@@ -613,8 +613,8 @@ describe("sync invalid indices with array order", () => {
     });
   });
 
-  describe("should automatically fallback to fixing all invalid indices", () => {
-    describe("should fallback to syncing duplicated indices when moved elements are empty", () => {
+  describe("should automatically fall back to fixing all invalid indices", () => {
+    describe("should fall back to syncing duplicated indices when moved elements are empty", () => {
       testMovedIndicesSync({
         elements: [
           { id: "A", index: "a1" },
@@ -630,7 +630,7 @@ describe("sync invalid indices with array order", () => {
       });
     });
 
-    describe("should fallback to syncing undefined / invalid indices when moved elements are empty", () => {
+    describe("should fall back to syncing undefined / invalid indices when moved elements are empty", () => {
       testMovedIndicesSync({
         elements: [
           { id: "A", index: "a1" },
@@ -646,7 +646,7 @@ describe("sync invalid indices with array order", () => {
       });
     });
 
-    describe("should fallback to syncing unordered indices when moved element is invalid", () => {
+    describe("should fall back to syncing unordered indices when moved element is invalid", () => {
       testMovedIndicesSync({
         elements: [
           { id: "A", index: "a1" },

@@ -14,7 +14,7 @@ interface TTDDialogPanelProps {
     icon?: ReactNode;
   };
   panelActionDisabled?: boolean;
-  onTextSubmitInProgess?: boolean;
+  onTextSubmitInProgress?: boolean;
   renderTopRight?: () => ReactNode;
   renderSubmitShortcut?: () => ReactNode;
   renderBottomRight?: () => ReactNode;
@@ -25,7 +25,7 @@ export const TTDDialogPanel = ({
   children,
   panelAction,
   panelActionDisabled = false,
-  onTextSubmitInProgess,
+  onTextSubmitInProgress,
   renderTopRight,
   renderSubmitShortcut,
   renderBottomRight,
@@ -47,16 +47,16 @@ export const TTDDialogPanel = ({
         <Button
           className="ttd-dialog-panel-button"
           onSelect={panelAction ? panelAction.action : () => {}}
-          disabled={panelActionDisabled || onTextSubmitInProgess}
+          disabled={panelActionDisabled || onTextSubmitInProgress}
         >
-          <div className={clsx({ invisible: onTextSubmitInProgess })}>
+          <div className={clsx({ invisible: onTextSubmitInProgress })}>
             {panelAction?.label}
             {panelAction?.icon && <span>{panelAction.icon}</span>}
           </div>
-          {onTextSubmitInProgess && <Spinner />}
+          {onTextSubmitInProgress && <Spinner />}
         </Button>
         {!panelActionDisabled &&
-          !onTextSubmitInProgess &&
+          !onTextSubmitInProgress &&
           renderSubmitShortcut?.()}
         {renderBottomRight?.()}
       </div>

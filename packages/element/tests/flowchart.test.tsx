@@ -221,7 +221,7 @@ describe("flow chart navigation", () => {
 
   it("multiple nodes at each level", () => {
     /**
-     * from the perspective of the first node, there're four layers, and
+     * from the perspective of the first node, there are four layers, and
      * there are four nodes at the second layer
      *
      *   -> ▨

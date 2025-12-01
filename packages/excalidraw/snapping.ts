@@ -40,7 +40,7 @@ import type {
 
 const SNAP_DISTANCE = 8;
 
-// do not comput more gaps per axis than this limit
+// do not compute more gaps per axis than this limit
 // TODO increase or remove once we optimize
 const VISIBLE_GAPS_LIMIT_PER_AXIS = 99999;
 
@@ -1108,7 +1108,7 @@ const createGapSnapLines = (
 export const snapResizingElements = (
   // use the latest elements to create snap lines
   selectedElements: ExcalidrawElement[],
-  // while using the original elements to appy dragOffset to calculate snaps
+  // while using the original elements to apply dragOffset to calculate snaps
   selectedOriginalElements: ExcalidrawElement[],
   app: AppClassProperties,
   event: KeyboardModifiersObject,

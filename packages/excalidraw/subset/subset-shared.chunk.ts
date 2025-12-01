@@ -39,14 +39,14 @@ export const subsetToBase64 = async (
 /**
  * Used by browser (worker thread) and as part of `subsetToBase64`, to subset the font based on the passed codepoints.
  *
- * @eturns woff2 font as an ArrayBuffer, to avoid copying large strings between worker threads and the main thread.
+ * @returns woff2 font as an ArrayBuffer, to avoid copying large strings between worker threads and the main thread.
  */
 export const subsetToBinary = async (
   arrayBuffer: ArrayBuffer,
   codePoints: Array<number>,
 ): Promise<ArrayBuffer> => {
   // lazy loaded wasm modules to avoid multiple initializations in case of concurrent triggers
-  // IMPORTANT: could be expensive, as each new worker instance lazy loads these to their own memory ~ keep the # of workes small!
+  // IMPORTANT: could be expensive, as each new worker instance lazy loads these to their own memory ~ keep the # of workers small!
   const { compress, decompress } = await loadWoff2();
   const { subset } = await loadHbSubset();
 
@@ -58,7 +58,7 @@ export const subsetToBinary = async (
 };
 
 /**
- * Util for isomoprhic browser (main thread), node and jsdom usage.
+ * Util for isomorphic browser (main thread), node and jsdom usage.
  *
  * Isn't used inside the worker to avoid copying large binary strings (as dataurl) between worker threads and the main thread.
  */

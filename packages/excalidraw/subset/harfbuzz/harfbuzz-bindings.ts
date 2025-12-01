@@ -1,6 +1,6 @@
 /**
  * Modified version of hb-subset bindings from "subset-font" package https://github.com/papandreou/subset-font/blob/3f711c8aa29a426c7f22655861abfb976950f527/index.js
- * 
+ *
  * CHANGELOG:
  * - removed dependency on node APIs to work inside the browser
  * - removed dependency on font fontverter for brotli compression
@@ -97,7 +97,7 @@ function subset(
   //   );
   // }
 
-  // Add unicodes indices
+  // Add unicode indices
   const inputUnicodes = hbSubsetWasm.hb_subset_input_unicode_set(input);
   for (const c of codePoints) {
     hbSubsetWasm.hb_set_add(inputUnicodes, c);

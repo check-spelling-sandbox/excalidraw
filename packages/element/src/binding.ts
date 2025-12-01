@@ -549,7 +549,7 @@ const bindingStrategyForSimpleArrowEndpointDragging_complex = (
   }
 
   // Must return as only one endpoint is dragged, therefore
-  // the end binding strategy might accidentally gets overriden
+  // the end binding strategy might accidentally gets overridden
   return { current, other: isMultiPoint ? { mode: undefined } : other };
 };
 
@@ -2139,7 +2139,7 @@ export class BindableElement {
    * - iterates through non deleted `boundElements` of the current element
    * - prepares updates to rebind each bound element to the current element or unbind it from `boundElements` in case of conflicts
    *
-   * NOTE: rebind expects that affected elements were previously unbound with `BindaleElement.unbindAffected`
+   * NOTE: rebind expects that affected elements were previously unbound with `BindableElement.unbindAffected`
    */
   public static rebindAffected = (
     elements: ElementsMap,
@@ -2171,7 +2171,7 @@ export class BindableElement {
 
         if (isTextElement(boundElement)) {
           const boundElements = bindableElement.boundElements?.slice() ?? [];
-          // check if this is the last element in the array, if not, there is an previously bound text which should be unbound
+          // check if this is the last element in the array, if not, there is a previously bound text which should be unbound
           if (
             boundElements.reverse().find((x) => x.type === "text")?.id ===
             boundElement.id

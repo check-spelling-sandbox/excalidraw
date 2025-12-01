@@ -72,7 +72,7 @@ import {
   isToolIcon,
   isWritableElement,
   sceneCoordsToViewportCoords,
-  tupleToCoors,
+  tupleToCoords,
   viewportCoordsToSceneCoords,
   wrapEvent,
   updateObject,
@@ -376,7 +376,7 @@ import {
 import { fileOpen } from "../data/filesystem";
 import {
   showHyperlinkTooltip,
-  hideHyperlinkToolip,
+  hideHyperlinkTooltip,
   Hyperlink,
 } from "../components/hyperlink/Hyperlink";
 
@@ -1561,7 +1561,7 @@ class App extends React.Component<AppProps, AppState> {
               }}
             >
               <div
-                //this is a hack that addresses isse with embedded excalidraw.com embeddable
+                //this is a hack that addresses issue with embedded excalidraw.com embeddable
                 //https://github.com/excalidraw/excalidraw/pull/6691#issuecomment-1607383938
                 /*ref={(ref) => {
                   if (!this.excalidrawContainerRef.current) {
@@ -1852,7 +1852,7 @@ class App extends React.Component<AppProps, AppState> {
 
   private toggleOverscrollBehavior(event: React.PointerEvent) {
     // when pointer inside editor, disable overscroll behavior to prevent
-    // panning to trigger history back/forward on MacOS Chrome
+    // panning to trigger history back/forward on macOS Chrome
     document.documentElement.style.overscrollBehaviorX =
       event.type === "pointerenter" ? "none" : "auto";
   }
@@ -2366,7 +2366,7 @@ class App extends React.Component<AppProps, AppState> {
           data: {
             status: "error",
             code: "ERR_OAI",
-            message: "Nothing genereated :(",
+            message: "Nothing generated :(",
           },
         });
         return;
@@ -2892,7 +2892,7 @@ class App extends React.Component<AppProps, AppState> {
 
     const { onIncrement } = this.props;
 
-    // per. optimmisation, only subscribe if there is the `onIncrement` prop registered, to avoid unnecessary computation
+    // per. optimisation, only subscribe if there is the `onIncrement` prop registered, to avoid unnecessary computation
     if (onIncrement) {
       this.store.onStoreIncrementEmitter.on((increment) => {
         onIncrement(increment);
@@ -3510,7 +3510,7 @@ class App extends React.Component<AppProps, AppState> {
       .split(/\n+/)
       .map((s) => s.trim())
       .filter(Boolean);
-    const embbeddableUrls = nonEmptyLines
+    const embeddableUrls = nonEmptyLines
       .map((str) => maybeParseEmbedSrc(str))
       .filter(
         (string) =>
@@ -3521,11 +3521,11 @@ class App extends React.Component<AppProps, AppState> {
 
     if (
       !isPlainPaste &&
-      embbeddableUrls.length > 0 &&
-      embbeddableUrls.length === nonEmptyLines.length
+      embeddableUrls.length > 0 &&
+      embeddableUrls.length === nonEmptyLines.length
     ) {
       const embeddables: NonDeleted<ExcalidrawEmbeddableElement>[] = [];
-      for (const url of embbeddableUrls) {
+      for (const url of embeddableUrls) {
         const prevEmbeddable: ExcalidrawEmbeddableElement | undefined =
           embeddables[embeddables.length - 1];
         const embeddable = this.insertEmbeddableElement({
@@ -4273,7 +4273,7 @@ class App extends React.Component<AppProps, AppState> {
       appState?: Pick<AppState, K> | null;
       collaborators?: SceneData["collaborators"];
       /**
-       *  Controls which updates should be captured by the `Store`. Captured updates are emmitted and listened to by other components, such as `History` for undo / redo purposes.
+       *  Controls which updates should be captured by the `Store`. Captured updates are emitted and listened to by other components, such as `History` for undo / redo purposes.
        *
        *  - `CaptureUpdateAction.IMMEDIATELY`: Updates are immediately undoable. Use for most local updates.
        *  - `CaptureUpdateAction.NEVER`: Updates never make it to undo/redo stack. Use for remote updates or scene initialization.
@@ -4324,7 +4324,7 @@ class App extends React.Component<AppProps, AppState> {
     // squash all deltas together, starting with a fresh new delta instance
     const aggregatedDelta = StoreDelta.squash(...deltas);
 
-    // create new instance of elements map & appState, so we don't accidentaly mutate existing ones
+    // create new instance of elements map & appState, so we don't accidentally mutate existing ones
     const nextAppState = { ...this.state };
     const nextElements = new Map(
       this.scene.getElementsMapIncludingDeleted(),
@@ -5271,7 +5271,7 @@ class App extends React.Component<AppProps, AppState> {
   /**
    * returns whether user is making a gesture with >= 2 fingers (points)
    * on o touch screen (not on a trackpad). Currently only relates to Darwin
-   * (iOS/iPadOS,MacOS), but may work on other devices in the future if
+   * (iOS/iPadOS,macOS), but may work on other devices in the future if
    * GestureEvent is standardized.
    */
   private isTouchScreenMultiTouchGesture = () => {
@@ -5313,7 +5313,7 @@ class App extends React.Component<AppProps, AppState> {
     // zoom in at the right location in the touchmove handler
     // (handleCanvasPointerMove).
     //
-    // On Macbook trackpad, we don't have those events so will zoom in at the
+    // On MacBook trackpad, we don't have those events so will zoom in at the
     // current location instead.
     //
     // As such, bail from this handler on touch devices.
@@ -6146,7 +6146,7 @@ class App extends React.Component<AppProps, AppState> {
       this.editorInterface.formFactor === "phone",
     );
     if (lastPointerDownHittingLinkIcon && lastPointerUpHittingLinkIcon) {
-      hideHyperlinkToolip();
+      hideHyperlinkTooltip();
       let url = this.hitLinkElement.link;
       if (url) {
         url = normalizeLink(url);
@@ -6695,7 +6695,7 @@ class App extends React.Component<AppProps, AppState> {
         this.scene.getNonDeletedElementsMap(),
       );
     } else {
-      hideHyperlinkToolip();
+      hideHyperlinkTooltip();
       if (
         hitElement &&
         (hitElement.link || isEmbeddableElement(hitElement)) &&
@@ -6961,7 +6961,7 @@ class App extends React.Component<AppProps, AppState> {
     }
 
     // since contextMenu options are potentially evaluated on each render,
-    // and an contextMenu action may depend on selection state, we must
+    // and a contextMenu action may depend on selection state, we must
     // close the contextMenu before we update the selection on pointerDown
     // (e.g. resetting selection)
     if (this.state.contextMenu) {
@@ -6981,7 +6981,7 @@ class App extends React.Component<AppProps, AppState> {
     // if dragging element is freedraw and another pointerdown event occurs
     // a second finger is on the screen
     // discard the freedraw element if it is very short because it is likely
-    // just a spike, otherwise finalize the freedraw element when the second
+    // just a spike; otherwise, finalize the freedraw element when the second
     // finger is lifted
     if (
       event.pointerType === "touch" &&
@@ -7470,7 +7470,7 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   /**
-   * pointerup may not fire in certian cases (user tabs away...), so in order
+   * pointerup may not fire in certain cases (user tabs away...), so in order
    * to properly cleanup pointerdown state, we need to fire any hanging
    * pointerup handlers manually
    */
@@ -7500,7 +7500,7 @@ class App extends React.Component<AppProps, AppState> {
     // automatically
     this.focusContainer();
 
-    // preventing defualt while text editing messes with cursor/focus
+    // preventing default while text editing messes with cursor/focus
     if (!this.state.editingTextElement) {
       // necessary to prevent browser from scrolling the page if excalidraw
       // not full-page #4489
@@ -7619,7 +7619,7 @@ class App extends React.Component<AppProps, AppState> {
     return {
       origin,
       withCmdOrCtrl: event[KEYS.CTRL_OR_CMD],
-      originInGrid: tupleToCoors(
+      originInGrid: tupleToCoords(
         getGridPoint(
           origin.x,
           origin.y,
@@ -7677,7 +7677,7 @@ class App extends React.Component<AppProps, AppState> {
     };
   }
 
-  // Returns whether the event is a dragging a scrollbar
+  // Returns whether the event is a scrollbar drag
   private handleDraggingScrollBar(
     event: React.PointerEvent<HTMLElement>,
     pointerDownState: PointerDownState,
@@ -7798,7 +7798,7 @@ class App extends React.Component<AppProps, AppState> {
       }
       if (pointerDownState.resize.handleType) {
         pointerDownState.resize.isResizing = true;
-        pointerDownState.resize.offset = tupleToCoors(
+        pointerDownState.resize.offset = tupleToCoords(
           getResizeOffsetXY(
             pointerDownState.resize.handleType,
             selectedElements,
@@ -8930,7 +8930,7 @@ class App extends React.Component<AppProps, AppState> {
       // event handler should hopefully ensure we're already working with
       // the updated state.
       if (pointerDownState.drag.offset === null) {
-        pointerDownState.drag.offset = tupleToCoors(
+        pointerDownState.drag.offset = tupleToCoords(
           getDragOffsetXY(
             this.scene.getSelectedElements(this.state),
             pointerDownState.origin.x,
@@ -9256,7 +9256,7 @@ class App extends React.Component<AppProps, AppState> {
                   vectorSubtract(bottomLeft, topLeft),
                 );
 
-                // project instantDrafOffset onto leftEdge and topEdge to decompose
+                // project instantDragOffset onto leftEdge and topEdge to decompose
                 const offsetVector = vector(
                   vectorDot(instantDragOffset, topEdge),
                   vectorDot(instantDragOffset, leftEdge),
@@ -9287,7 +9287,7 @@ class App extends React.Component<AppProps, AppState> {
             }
           }
 
-          // Snap cache *must* be synchronously popuplated before initial drag,
+          // Snap cache *must* be synchronously populated before initial drag,
           // otherwise the first drag even will not snap, causing a jump before
           // it snaps to its position if previously snapped already.
           this.maybeCacheVisibleGaps(event, selectedElements);
@@ -11097,7 +11097,7 @@ class App extends React.Component<AppProps, AppState> {
 
       // -----------------------------------------------------------------------
       // NOTE wheel, touchstart, touchend events must be registered outside
-      // of react because react binds them them passively (so we can't prevent
+      // of react because react binds them passively (so we can't prevent
       // default on them)
       this.interactiveCanvas.addEventListener(
         EVENT.TOUCH_START,

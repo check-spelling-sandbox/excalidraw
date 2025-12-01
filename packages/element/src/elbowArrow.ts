@@ -107,7 +107,7 @@ type ElbowArrowData = {
   hoveredEndElement: ExcalidrawBindableElement | null;
 };
 
-const DEDUP_TRESHOLD = 1;
+const DEDUP_THRESHOLD = 1;
 export const BASE_PADDING = 40;
 
 const handleSegmentRenormalization = (
@@ -184,7 +184,7 @@ const handleSegmentRenormalization = (
 
       if (
         // Remove segments that are too short
-        pointDistance(points[i - 2], points[i - 1]) < DEDUP_TRESHOLD
+        pointDistance(points[i - 2], points[i - 1]) < DEDUP_THRESHOLD
       ) {
         const prevPrevSegmentIdx =
           nextFixedSegments?.findIndex((segment) => segment.index === i - 2) ??
@@ -1444,7 +1444,7 @@ const routeElbowArrow = (
     hoveredEndElement,
   } = elbowArrowData;
 
-  // Canculate Grid positions
+  // Calculate Grid positions
   const grid = calculateGrid(
     dynamicAABBs,
     startDonglePosition ? startDonglePosition : startGlobalPoint,
@@ -2031,7 +2031,7 @@ const estimateSegmentCount = (
 };
 
 /**
- * Get neighboring points for a gived grid address
+ * Get neighboring points for a given grid address
  */
 const getNeighbors = ([col, row]: [number, number], grid: Grid) =>
   [
@@ -2186,7 +2186,7 @@ const removeElbowArrowShortSegments = (
 
       const prev = points[idx - 1];
       const prevDist = pointDistance(prev, p);
-      return prevDist > DEDUP_TRESHOLD;
+      return prevDist > DEDUP_THRESHOLD;
     });
   }
 
@@ -2285,7 +2285,7 @@ const gridAddressesEqual = (a: GridAddress, b: GridAddress): boolean =>
 
 export const validateElbowPoints = <P extends GlobalPoint | LocalPoint>(
   points: readonly P[],
-  tolerance: number = DEDUP_TRESHOLD,
+  tolerance: number = DEDUP_THRESHOLD,
 ) =>
   points
     .slice(1)

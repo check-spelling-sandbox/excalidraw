@@ -182,7 +182,7 @@ export const handleBindTextResize = (
       nextHeight = metrics.height;
       nextWidth = metrics.width;
     }
-    // increase height in case text element height exceeds
+    // increase height if text element height exceeds
     if (nextHeight > maxHeight) {
       containerHeight = computeContainerDimensionForBoundText(
         nextHeight,
@@ -415,7 +415,7 @@ export const shouldAllowVerticalAlign = (
   });
 };
 
-export const suppportsHorizontalAlign = (
+export const supportsHorizontalAlign = (
   selectedElements: NonDeletedExcalidrawElement[],
   elementsMap: ElementsMap,
 ) => {

@@ -45,7 +45,7 @@ export const POINTER_EVENTS = {
   enabled: "all",
   disabled: "none",
   // asserted as any so it can be freely assigned to React Element
-  // "pointerEnvets" CSS prop
+  // "pointerEvents" CSS prop
   inheritFromUI: "var(--ui-pointerEvents)" as any,
 } as const;
 
@@ -380,8 +380,8 @@ export const ROUNDNESS = {
   PROPORTIONAL_RADIUS: 2,
 
   // Current default algorithm for rectangles, using fixed pixel radius.
-  // It's working similarly to a regular border-radius, but attemps to make
-  // radius visually similar across differnt element sizes, especially
+  // It's working similarly to a regular border-radius, but attempts to make
+  // radius visually similar across different element sizes, especially
   // very large and very small elements.
   //
   // NOTE right now we don't allow configuration and use a constant radius
@@ -492,7 +492,7 @@ export enum UserIdleState {
 
 /**
  * distance at which we merge points instead of adding a new merge-point
- * when converting a line to a polygon (merge currently means overlaping
+ * when converting a line to a polygon (merge currently means overlapping
  * the start and end points)
  */
 export const LINE_POLYGON_POINT_MERGE_DISTANCE = 20;

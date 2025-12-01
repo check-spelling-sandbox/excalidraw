@@ -1,6 +1,6 @@
 # API
 
-At the moment the mermaid-to-excalidraw works in two steps. First, you call `parseMermaidToExcalidraw(mermaidSyntax)` on the mermaid diagram definition string, which resolves with elements in a skeleton format — a simplified excalidraw JSON format (docs coming soon). You then pass them to `convertToExcalidrawElements(elements)` to get the fully qualified excalidraw elements you can render in the editor.
+At the moment, the mermaid-to-excalidraw works in two steps. First, you call `parseMermaidToExcalidraw(mermaidSyntax)` on the mermaid diagram definition string, which resolves with elements in a skeleton format — a simplified excalidraw JSON format (docs coming soon). You then pass them to `convertToExcalidrawElements(elements)` to get the fully qualified excalidraw elements you can render in the editor.
 
 The need for these two steps is due to the [@excalidraw/excalidraw](/docs/@excalidraw/excalidraw/installation) being a **UMD** build so we currently cannot import the `convertToExcalidrawElements()` util alone, until we support a tree-shakeable **ESM** build.
 
@@ -26,7 +26,7 @@ try {
 
 ## Supported Diagram Types
 
-Currently only [flowcharts](https://mermaid.js.org/syntax/flowchart.html) are supported. Oother diagram types will be rendered as an image in Excalidraw.
+Currently only [flowcharts](https://mermaid.js.org/syntax/flowchart.html) are supported. Other diagram types will be rendered as an image in Excalidraw.
 
 ### Flowchart
 
@@ -74,26 +74,26 @@ flowchart TB
 
 <img src="https://github.com/excalidraw/excalidraw/assets/11256141/098bce52-8f93-437c-9a06-c6972e27c70a"  width="350" height="200"/>
 
-#### Unsupported shapes fallback to Rectangle
+#### Unsupported shapes fall back to Rectangle
 
-**Subroutine**, **Cylindrical**, **Asymmetric**, **Hexagon**, **Parallelogram**, **Trapezoid** are not supported in Excalidraw hence they fallback to the closest shape **Rectangle**
+**Subroutine**, **Cylindrical**, **Asymmetric**, **Hexagon**, **Parallelogram**, **Trapezoid** are not supported in Excalidraw hence they fall back to the closest shape **Rectangle**
 
 ```
 flowchart LR
-  id1[[Subroutine fallback to Rectangle]]
-  id2[(Cylindrical fallback to Rectangle)]
-  id3>Asymmetric fallback to Rectangle]
-  id4{{Hexagon fallback to Rectangle}}
-  id5[/Parallelogram fallback to Rectangle /]
-  id6[/Trapezoid fallback to Rectangle\]
+  id1[[Subroutine fall back to Rectangle]]
+  id2[(Cylindrical fall back to Rectangle)]
+  id3>Asymmetric fall back to Rectangle]
+  id4{{Hexagon fall back to Rectangle}}
+  id5[/Parallelogram fall back to Rectangle /]
+  id6[/Trapezoid fall back to Rectangle\]
 ```
-The above shapes are not supported in Excalidraw hence they fallback to Rectangle
+The above shapes are not supported in Excalidraw hence they fall back to Rectangle
 
 <img src="https://github.com/excalidraw/excalidraw/assets/11256141/cb269473-16c5-4c35-bd7a-d631d8cc5b47"  width="350" height="200"/>
 
-#### Markdown fallback to Regular text
+#### Markdown fall back to Regular text
 
-Since we don't support wysiwyg text editor yet, hence [Markdown Strings](https://mermaid.js.org/syntax/flowchart.html#markdown-strings) will fallback to regular text.
+Since we don't support wysiwyg text editor yet, hence [Markdown Strings](https://mermaid.js.org/syntax/flowchart.html#markdown-strings) will fall back to regular text.
 
 ```
 flowchart LR
@@ -101,7 +101,7 @@ flowchart LR
 ```
 <img src="https://github.com/excalidraw/excalidraw/assets/11256141/107bd428-9ab9-42d4-ba12-b1e29c8db478"  width="250" height="200"/>
 
-#### Basic FontAwesome fallback to text
+#### Basic FontAwesome fall back to text
 
 The [FontAwesome](https://mermaid.js.org/syntax/flowchart.html#basic-support-for-fontawesome) icons aren't support so they won't be rendered in Excalidraw
 
@@ -115,7 +115,7 @@ flowchart TD
 
 <img src="https://github.com/excalidraw/excalidraw/assets/11256141/7a693863-c3f9-42ff-b325-4b3f8303c7af"  width="250" height="200"/>
 
-#### Cross Arrow head fallback to Bar Arrow head
+#### Cross Arrow head fall back to Bar Arrow head
 
 ```
 flowchart LR

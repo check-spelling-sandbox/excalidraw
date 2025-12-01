@@ -81,7 +81,7 @@ const toContiguousGroups = (array: number[]) => {
 };
 
 /**
- * @returns index of target element, consindering tightly-bound elements
+ * @returns index of target element, considering tightly-bound elements
  * (currently non-linear elements bound to a container) as a one unit.
  * If no binding present, returns `undefined`.
  */

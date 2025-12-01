@@ -48,7 +48,7 @@ import type {
 /**
  * Duplicate an element, often used in the alt-drag operation.
  * Note that this method has gotten a bit complicated since the
- * introduction of gruoping/ungrouping elements.
+ * introduction of grouping/ungrouping elements.
  * @param editingGroupId The current group being edited. The new
  *                       element will inherit this group and its
  *                       parents.
@@ -107,7 +107,7 @@ export const duplicateElements = (
         /**
          * Duplicates all elements in array.
          *
-         * Use this when programmaticaly duplicating elements, without direct
+         * Use this when programmatically duplicating elements, without direct
          * user interaction.
          */
         type: "everything";
@@ -187,7 +187,7 @@ export const duplicateElements = (
   // helper functions
   // -------------------------------------------------------------------------
 
-  // Used for the heavy lifing of copying a single element, a group of elements
+  // Used for the heavy lifting of copying a single element, a group of elements
   // an element with bound text etc.
   const copyElements = <T extends ExcalidrawElement | ExcalidrawElement[]>(
     element: T,

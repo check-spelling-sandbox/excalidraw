@@ -84,7 +84,7 @@ import type { RoughCanvas } from "roughjs/bin/canvas";
 // using a stronger invert (100% vs our regular 93%) and saturate
 // as a temp hack to make images in dark theme look closer to original
 // color scheme (it's still not quite there and the colors look slightly
-// desatured, alas...)
+// desaturated, alas...)
 export const IMAGE_INVERT_FILTER =
   "invert(100%) hue-rotate(180deg) saturate(1.25)";
 
@@ -713,7 +713,7 @@ export const renderSelectionElement = (
 
   // render from 0.5px offset  to get 1px wide line
   // https://stackoverflow.com/questions/7530593/html5-canvas-and-line-width/7531540#7531540
-  // TODO can be be improved by offseting to the negative when user selects
+  // TODO can be be improved by offsetting to the negative when user selects
   // from right to left
   const offset = 0.5 / appState.zoom.value;
 
@@ -962,7 +962,7 @@ export const renderElement = (
           (!element.angle ||
             // or check if angle is a right angle in which case we can still
             // disable smoothing without adversely affecting the result
-            // We need less-than comparison because of FP artihmetic
+            // We need less-than comparison because of FP arithmetic
             isRightAngleRads(element.angle))
         ) {
           // Disabling smoothing makes output much sharper, especially for

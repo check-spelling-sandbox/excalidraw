@@ -11,7 +11,7 @@ import {
 
 import {
   shouldAllowVerticalAlign,
-  suppportsHorizontalAlign,
+  supportsHorizontalAlign,
   hasBoundTextElement,
   isElbowArrow,
   isImageElement,
@@ -229,7 +229,7 @@ export const SelectedShapeActions = ({
           {renderAction("changeFontFamily")}
           {renderAction("changeFontSize")}
           {(appState.activeTool.type === "text" ||
-            suppportsHorizontalAlign(targetElements, elementsMap)) &&
+            supportsHorizontalAlign(targetElements, elementsMap)) &&
             renderAction("changeTextAlign")}
         </>
       )}
@@ -593,7 +593,7 @@ const CombinedTextProperties = ({
                 targetElements.some(isTextElement)) &&
                 renderAction("changeFontSize")}
               {(appState.activeTool.type === "text" ||
-                suppportsHorizontalAlign(targetElements, elementsMap)) &&
+                supportsHorizontalAlign(targetElements, elementsMap)) &&
                 renderAction("changeTextAlign")}
               {shouldAllowVerticalAlign(targetElements, elementsMap) &&
                 renderAction("changeVerticalAlign")}

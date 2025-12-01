@@ -151,7 +151,7 @@ type FileEncodingInfo = {
   /* version 2 is the version we're shipping the initial image support with.
     version 1 was a PR version that a lot of people were using anyway.
     Thus, if there are issues we can check whether they're not using the
-    unoffic version */
+    unofficial version */
   version: 1 | 2;
   compression: "pako@1" | null;
   encryption: "AES-GCM" | null;
@@ -182,7 +182,7 @@ function dataView(
 /**
  * abstraction over DataView that serves as a typed getter/setter in case
  * you're using constants for the byte size and want to ensure there's no
- * discrepenancy in the encoding across refactors.
+ * discrepancy in the encoding across refactors.
  *
  * DataView serves for an endian-agnostic handling of numbers in ArrayBuffers.
  */
@@ -195,7 +195,7 @@ function dataView(
   if (value != null) {
     if (value > Math.pow(2, DATA_VIEW_BITS_MAP[bytes]) - 1) {
       throw new Error(
-        `attempting to set value higher than the allocated bytes (value: ${value}, bytes: ${bytes})`,
+        `attempting to set value greater than the allocated bytes (value: ${value}, bytes: ${bytes})`,
       );
     }
     const method = `setUint${DATA_VIEW_BITS_MAP[bytes]}` as const;

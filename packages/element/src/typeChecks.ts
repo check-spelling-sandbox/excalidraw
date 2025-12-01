@@ -382,7 +382,7 @@ export const getLinearElementSubType = (
 
 /**
  * Checks if current element points meet all the conditions for polygon=true
- * (this isn't a element type check, for that use isLineElement).
+ * (this isn't an element type check, for that use isLineElement).
  *
  * If you want to check if points *can* be turned into a polygon, use
  *  canBecomePolygon(points).

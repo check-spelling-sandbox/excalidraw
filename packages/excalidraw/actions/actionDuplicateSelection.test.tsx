@@ -218,7 +218,7 @@ describe("actionDuplicateSelection", () => {
       ]);
     });
 
-    it("frame text container selected (text not exists)", () => {
+    it("frame text container selected (no text)", () => {
       const frame = API.createElement({
         type: "frame",
       });
@@ -240,7 +240,7 @@ describe("actionDuplicateSelection", () => {
     });
 
     // shouldn't happen
-    it("frame bound text selected (container not exists)", () => {
+    it("frame bound text selected (without container)", () => {
       const frame = API.createElement({
         type: "frame",
       });

@@ -115,14 +115,14 @@ export const TTDDialogBase = withInternalFallback(
       }));
     };
 
-    const [onTextSubmitInProgess, setOnTextSubmitInProgess] = useState(false);
+    const [onTextSubmitInProgress, setOnTextSubmitInProgress] = useState(false);
     const [rateLimits, setRateLimits] = useAtom(rateLimitsAtom);
 
     const onGenerate = async () => {
       if (
         prompt.length > MAX_PROMPT_LENGTH ||
         prompt.length < MIN_PROMPT_LENGTH ||
-        onTextSubmitInProgess ||
+        onTextSubmitInProgress ||
         rateLimits?.rateLimitRemaining === 0 ||
         // means this is not a text-to-diagram dialog (needed for TS only)
         "__fallback" in rest
@@ -146,7 +146,7 @@ export const TTDDialogBase = withInternalFallback(
       }
 
       try {
-        setOnTextSubmitInProgess(true);
+        setOnTextSubmitInProgress(true);
 
         trackEvent("ai", "generate", "ttd");
 
@@ -184,11 +184,11 @@ export const TTDDialogBase = withInternalFallback(
           trackEvent("ai", "mermaid parse success", "ttd");
         } catch (error: any) {
           console.info(
-            `%cTTD mermaid render errror: ${error.message}`,
+            `%cTTD mermaid render error: ${error.message}`,
             "color: red",
           );
           console.info(
-            `>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nTTD mermaid definition render errror: ${error.message}`,
+            `>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nTTD mermaid definition render error: ${error.message}`,
             "color: yellow",
           );
           trackEvent("ai", "mermaid parse failed", "ttd");
@@ -205,7 +205,7 @@ export const TTDDialogBase = withInternalFallback(
         }
         setError(new Error(message));
       } finally {
-        setOnTextSubmitInProgess(false);
+        setOnTextSubmitInProgress(false);
       }
     };
 
@@ -293,7 +293,7 @@ export const TTDDialogBase = withInternalFallback(
                     label: "Generate",
                     icon: ArrowRightIcon,
                   }}
-                  onTextSubmitInProgess={onTextSubmitInProgess}
+                  onTextSubmitInProgress={onTextSubmitInProgress}
                   panelActionDisabled={
                     prompt.length > MAX_PROMPT_LENGTH ||
                     rateLimits?.rateLimitRemaining === 0

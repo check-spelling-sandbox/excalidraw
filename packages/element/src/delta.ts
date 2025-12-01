@@ -690,13 +690,13 @@ export class AppStateDelta implements DeltaContainer<AppState> {
             : appState.selectedLinearElement,
       };
 
-      const constainsVisibleChanges = this.filterInvisibleChanges(
+      const containsVisibleChanges = this.filterInvisibleChanges(
         appState,
         nextAppState,
         nextElements,
       );
 
-      return [nextAppState, constainsVisibleChanges];
+      return [nextAppState, containsVisibleChanges];
     } catch (e) {
       // shouldn't really happen, but just in case
       console.error(`Couldn't apply appstate change`, e);
@@ -1092,7 +1092,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     deleted,
     inserted,
   }: Delta<ElementPartial>) =>
-    // dissallowing added as "deleted", which could cause issues when resolving conflicts
+    // disallowing added as "deleted", which could cause issues when resolving conflicts
     deleted.isDeleted === true && !inserted.isDeleted;
 
   private static satisfiesRemoval = ({
@@ -1106,7 +1106,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     inserted,
   }: Delta<ElementPartial>) => !!deleted.isDeleted === !!inserted.isDeleted;
 
-  private static satisfiesCommmonInvariants = ({
+  private static satisfiesCommonInvariants = ({
     deleted,
     inserted,
   }: Delta<ElementPartial>) =>
@@ -1135,13 +1135,13 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
   private static validate(
     elementsDelta: ElementsDelta,
     type: "added" | "removed" | "updated",
-    satifiesSpecialInvariants: (delta: Delta<ElementPartial>) => boolean,
+    satisfiesSpecialInvariants: (delta: Delta<ElementPartial>) => boolean,
   ) {
     for (const [id, delta] of Object.entries(elementsDelta[type])) {
       if (
-        !this.satisfiesCommmonInvariants(delta) ||
+        !this.satisfiesCommonInvariants(delta) ||
         !this.satisfiesUniqueInvariants(elementsDelta, id) ||
-        !satifiesSpecialInvariants(delta)
+        !satisfiesSpecialInvariants(delta)
       ) {
         console.error(
           `Broken invariant for "${type}" delta, element "${id}", delta:`,
@@ -1292,11 +1292,11 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
   }
 
   /**
-   * Update delta/s based on the existing elements.
+   * Update delta(s) based on the existing elements.
    *
    * @param nextElements current elements
    * @param modifierOptions defines which of the delta (`deleted` or `inserted`) will be updated
-   * @returns new instance with modified delta/s
+   * @returns new instance with modified delta(s)
    */
   public applyLatestChanges(
     prevElements: SceneElementsMap,
@@ -1619,7 +1619,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
       let element = elements.get(id);
 
       if (!element) {
-        // always fallback to the local snapshot, in cases when we cannot find the element in the elements array
+        // always fall back to the local snapshot, in cases when we cannot find the element in the elements array
         element = snapshot.get(id);
 
         if (element) {
@@ -1766,7 +1766,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
 
       if (prevElement === nextElement) {
         // create the new element instance in case we didn't modify the element yet
-        // so that we won't end up in an incosistent state in case we would fail in the middle of mutations
+        // so that we won't end up in an inconsistent state in case we would fail in the middle of mutations
         affectedElement = newElementWith(
           nextElement,
           {
@@ -2007,7 +2007,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
     }
 
     // synchronize all elements that were actually moved
-    // could fallback to synchronizing all invalid indices
+    // could fall back to synchronizing all invalid indices
     return arrayToMap(syncMovedIndices(ordered, moved)) as typeof elements;
   }
 
@@ -2024,7 +2024,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
 
       // don't diff the points as:
       // - we can't ensure the multiplayer order consistency without fractional index on each point
-      // - we prefer to not merge the points, as it might just lead to unexpected / incosistent results
+      // - we prefer to not merge the points, as it might just lead to unexpected / inconsistent results
       const deletedPoints =
         (
           deleted as ElementPartial<
@@ -2040,7 +2040,7 @@ export class ElementsDelta implements DeltaContainer<SceneElementsMap> {
         ).points ?? [];
 
       if (!Delta.isDifferent(deletedPoints, insertedPoints)) {
-        // delete the points from delta if there is no difference, otherwise leave them as they were captured due to consistency
+        // delete the points from delta if there is no difference; otherwise, leave them as they were captured due to consistency
         Reflect.deleteProperty(deleted, "points");
         Reflect.deleteProperty(inserted, "points");
       }

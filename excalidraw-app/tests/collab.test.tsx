@@ -64,7 +64,7 @@ vi.mock("socket.io-client", () => {
 });
 
 /**
- * These test would deserve to be extended by testing collab with (at least) two clients simultanouesly,
+ * These test would deserve to be extended by testing collab with (at least) two clients simultaneously,
  * while having access to both scenes, appstates stores, histories and etc.
  * i.e. multiplayer history tests could be a good first candidate, as we could test both history stacks simultaneously.
  */
@@ -127,7 +127,7 @@ describe("collaboration", () => {
     });
 
     await waitFor(() => {
-      // altough the updates get batched,
+      // although the updates get batched,
       // we expect two ephemeral increments for each update,
       // and each such update should have the expected change
       expect(ephemeralIncrements.length).toBe(2);

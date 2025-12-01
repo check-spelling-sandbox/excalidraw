@@ -70,7 +70,7 @@ export const ToolButton = React.forwardRef(
     }: ToolButtonProps,
     ref,
   ) => {
-    const { id: excalId } = useExcalidrawContainer();
+    const { id: excaliId } = useExcalidrawContainer();
     const innerRef = React.useRef(null);
     React.useImperativeHandle(ref, () => innerRef.current);
     const sizeCn = `ToolIcon_size_${size}`;
@@ -188,7 +188,7 @@ export const ToolButton = React.forwardRef(
           aria-label={props["aria-label"]}
           aria-keyshortcuts={props["aria-keyshortcuts"]}
           data-testid={props["data-testid"]}
-          id={`${excalId}-${props.id}`}
+          id={`${excaliId}-${props.id}`}
           onChange={() => {
             props.onChange?.({ pointerType: lastPointerTypeRef.current });
           }}

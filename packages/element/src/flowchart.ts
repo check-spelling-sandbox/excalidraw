@@ -245,11 +245,11 @@ const addNewNode = (
 ) => {
   const elementsMap = scene.getNonDeletedElementsMap();
   const successors = getSuccessors(element, elementsMap, direction);
-  const predeccessors = getPredecessors(element, elementsMap, direction);
+  const predecessors = getPredecessors(element, elementsMap, direction);
 
   const offsets = getOffsets(
     element,
-    [...successors, ...predeccessors],
+    [...successors, ...predecessors],
     direction,
   );
 
@@ -506,7 +506,7 @@ export class FlowChartNavigator {
   // nodes that are ONE link away (successor and predecessor both included)
   private sameLevelNodes: ExcalidrawElement[] = [];
   private sameLevelIndex: number = 0;
-  // set it to the opposite of the defalut creation direction
+  // set it to the opposite of the default creation direction
   private direction: LinkDirection | null = null;
   // for speedier navigation
   private visitedNodes: Set<ExcalidrawElement["id"]> = new Set();
@@ -586,7 +586,7 @@ export class FlowChartNavigator {
     /**
      * CASE:
      * - (just started exploring or still going at the same direction) OR
-     * - there're no nodes at the given direction
+     * - there are no nodes at the given direction
      *
      * RESULT:
      * - go to some other unvisited linked node

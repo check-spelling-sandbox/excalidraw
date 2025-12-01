@@ -163,7 +163,7 @@ export const actionGroup = register({
         ),
       });
     });
-    // keep the z order within the group the same, but move them
+    // keep the z order within the group unchanged, but move them
     // to the z order of the highest element in the layer stack
     const elementsInGroup = getElementsInGroup(nextElements, newGroupId);
     const lastElementInGroup = elementsInGroup[elementsInGroup.length - 1];
@@ -282,7 +282,7 @@ export const actionUngroup = register({
       }
     });
 
-    // remove binded text elements from selection
+    // remove bound text elements from selection
     updateAppState.selectedElementIds = Object.entries(
       updateAppState.selectedElementIds,
     ).reduce(

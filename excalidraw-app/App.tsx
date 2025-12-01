@@ -633,7 +633,7 @@ const ExcalidrawWrapper = () => {
     }
 
     // this check is redundant, but since this is a hot path, it's best
-    // not to evaludate the nested expression every time
+    // not to evaluate the nested expression every time
     if (!LocalData.isSavePaused()) {
       LocalData.save(elements, appState, files, () => {
         if (excalidrawAPI) {

@@ -16,15 +16,15 @@ describe("Test internal component fallback rendering", () => {
 
     expect(queryAllByTestId(container, "main-menu-trigger")?.length).toBe(2);
 
-    const excalContainers = container.querySelectorAll<HTMLDivElement>(
+    const excaliContainers = container.querySelectorAll<HTMLDivElement>(
       ".excalidraw-container",
     );
 
     expect(
-      queryAllByTestId(excalContainers[0], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[0], "main-menu-trigger")?.length,
     ).toBe(1);
     expect(
-      queryAllByTestId(excalContainers[1], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[1], "main-menu-trigger")?.length,
     ).toBe(1);
   });
 
@@ -40,15 +40,15 @@ describe("Test internal component fallback rendering", () => {
 
     expect(queryAllByTestId(container, "main-menu-trigger")?.length).toBe(2);
 
-    const excalContainers = container.querySelectorAll<HTMLDivElement>(
+    const excaliContainers = container.querySelectorAll<HTMLDivElement>(
       ".excalidraw-container",
     );
 
     expect(
-      queryAllByTestId(excalContainers[0], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[0], "main-menu-trigger")?.length,
     ).toBe(1);
     expect(
-      queryAllByTestId(excalContainers[1], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[1], "main-menu-trigger")?.length,
     ).toBe(1);
   });
 
@@ -66,15 +66,15 @@ describe("Test internal component fallback rendering", () => {
 
     expect(queryAllByTestId(container, "main-menu-trigger")?.length).toBe(2);
 
-    const excalContainers = container.querySelectorAll<HTMLDivElement>(
+    const excaliContainers = container.querySelectorAll<HTMLDivElement>(
       ".excalidraw-container",
     );
 
     expect(
-      queryAllByTestId(excalContainers[0], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[0], "main-menu-trigger")?.length,
     ).toBe(1);
     expect(
-      queryAllByTestId(excalContainers[1], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[1], "main-menu-trigger")?.length,
     ).toBe(1);
   });
 
@@ -88,15 +88,15 @@ describe("Test internal component fallback rendering", () => {
 
     expect(queryAllByTestId(container, "main-menu-trigger")?.length).toBe(2);
 
-    const excalContainers = container.querySelectorAll<HTMLDivElement>(
+    const excaliContainers = container.querySelectorAll<HTMLDivElement>(
       ".excalidraw-container",
     );
 
     expect(
-      queryAllByTestId(excalContainers[0], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[0], "main-menu-trigger")?.length,
     ).toBe(1);
     expect(
-      queryAllByTestId(excalContainers[1], "main-menu-trigger")?.length,
+      queryAllByTestId(excaliContainers[1], "main-menu-trigger")?.length,
     ).toBe(1);
   });
 });

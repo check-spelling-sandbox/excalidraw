@@ -988,7 +988,7 @@ const getNextSingleWidthAndHeightFromPointer = (
     scaleY = (startBottomRight[1] - rotatedPointer[1]) / boundsCurrentHeight;
   }
 
-  // We have to use dimensions of element on screen, otherwise the scaling of the
+  // We have to use dimensions of element on screen; otherwise, the scaling of the
   // dimensions won't match the cursor for linear elements.
   let nextWidth = latestElement.width * scaleX;
   let nextHeight = latestElement.height * scaleY;
@@ -1322,7 +1322,7 @@ export const resizeMultipleElements = (
      * 1. determine over which axis is the element being flipped
      *    (could be x, y, or both) indicated by `flipFactorX` & `flipFactorY`
      * 2. shift element's position by the amount of width or height (or both) or
-     *    mirror points in the case of linear & freedraw elemenets
+     *    mirror points in the case of linear & freedraw elements
      * 3. adjust element angle
      */
     const [flipFactorX, flipFactorY] = [flipByX ? -1 : 1, flipByY ? -1 : 1];

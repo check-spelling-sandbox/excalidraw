@@ -44,7 +44,7 @@ describe("getPerfectElementSize", () => {
     expect(height).toBeCloseTo(207.846, EPSILON_DIGITS);
   });
 
-  it("should return height equals to width if locked angle is 45 deg", () => {
+  it("should return height equal to width if locked angle is 45 deg", () => {
     const { height, width } = getPerfectElementSize("arrow", 135, 145);
     expect(width).toBeCloseTo(135, EPSILON_DIGITS);
     expect(height).toBeCloseTo(135, EPSILON_DIGITS);

@@ -7334,7 +7334,7 @@ exports[`regression tests > given a group of selected elements with an element t
 ]
 `;
 
-exports[`regression tests > given a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] appState 1`] = `
+exports[`regression tests > given a selected element A and an unselected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] appState 1`] = `
 {
   "activeEmbeddable": null,
   "activeLockedId": null,
@@ -7457,13 +7457,13 @@ exports[`regression tests > given a selected element A and a not selected elemen
 }
 `;
 
-exports[`regression tests > given a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] number of elements 1`] = `0`;
+exports[`regression tests > given a selected element A and an unselected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] number of elements 1`] = `0`;
 
-exports[`regression tests > given a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] number of renders 1`] = `12`;
+exports[`regression tests > given a selected element A and an unselected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] number of renders 1`] = `12`;
 
-exports[`regression tests > given a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] redo stack 1`] = `[]`;
+exports[`regression tests > given a selected element A and an unselected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] redo stack 1`] = `[]`;
 
-exports[`regression tests > given a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] undo stack 1`] = `
+exports[`regression tests > given a selected element A and an unselected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection > [end of test] undo stack 1`] = `
 [
   {
     "appState": AppStateDelta {

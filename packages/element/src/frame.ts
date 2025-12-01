@@ -489,7 +489,7 @@ export const filterElementsEligibleAsFrameChildren = (
 };
 
 /**
- * Retains (or repairs for target frame) the ordering invriant where children
+ * Retains (or repairs for target frame) the ordering invariant where children
  * elements come right before the parent frame:
  * [el, el, child, child, frame, el]
  *
@@ -721,8 +721,8 @@ export const omitGroupsContainingFrameLikes = (
 };
 
 /**
- * depending on the appState, return target frame, which is the frame the given element
- * is going to be added to or remove from
+ * depending on the appState, return target frame, which is the frame to which the
+ * given element will be added or removed
  */
 export const getTargetFrame = (
   element: ExcalidrawElement,

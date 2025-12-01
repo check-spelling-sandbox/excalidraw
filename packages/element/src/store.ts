@@ -104,7 +104,7 @@ export class Store {
   }
 
   /**
-   * Use to schedule a delta calculation, which will consquentially be emitted as `DurableStoreIncrement` and pushed in the undo stack.
+   * Use to schedule a delta calculation, which will consequently be emitted as `DurableStoreIncrement` and pushed in the undo stack.
    */
   // TODO: Suspicious that this is called so many places. Seems error-prone.
   public scheduleCapture() {
@@ -143,7 +143,7 @@ export class Store {
       // immediately create an immutable change of the scheduled updates,
       // compared to the current state, so that they won't mutate later on during batching
       // also, we have to compare against the current state,
-      // as comparing against the snapshot might include yet uncomitted changes (i.e. async freedraw / text / image, etc.)
+      // as comparing against the snapshot might include yet uncommitted changes (i.e. async freedraw / text / image, etc.)
       const currentSnapshot = StoreSnapshot.create(
         this.app.scene.getElementsMapIncludingDeleted(),
         this.app.state,
@@ -153,7 +153,7 @@ export class Store {
         action,
         // let's sync invalid indices first, so that we could detect this change
         // also have the synced elements immutable, so that we don't mutate elements,
-        // that are already in the scene, otherwise we wouldn't see any change
+        // that are already in the scene; otherwise, we wouldn't see any change
         params.elements
           ? syncInvalidIndicesImmutable(params.elements)
           : undefined,
@@ -427,7 +427,7 @@ export class Store {
 }
 
 /**
- * Repsents a change to the store containing changed elements and appState.
+ * Represents a change to the store containing changed elements and appState.
  */
 export class StoreChange {
   // so figuring out what has changed should ideally be just quick reference checks
@@ -449,7 +449,7 @@ export class StoreChange {
 }
 
 /**
- * Encpasulates any change to the store (durable or ephemeral).
+ * Encapsulates any change to the store (durable or ephemeral).
  */
 export abstract class StoreIncrement {
   protected constructor(
@@ -972,7 +972,7 @@ export class StoreSnapshot {
 
     for (const prevElement of toIterable(this.elements)) {
       // Clone previous elements, never delete, in case nextElements would be just a subset of previous elements
-      // i.e. during collab, persist or whenenever isDeleted elements get cleared
+      // i.e. during collab, persist or whenever isDeleted elements get cleared
       clonedElements.set(prevElement.id, prevElement);
     }
 

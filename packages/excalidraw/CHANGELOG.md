@@ -66,9 +66,9 @@ We've transitioned from `UMD` to `ESM` bundle format. Our new `dist` folder insi
 
 Make sure that your JavaScript environment supports ES modules. You _may_ need to define `"type": "module"` in your `package.json` file or as part of the `<script type="module" />` attribute.
 
-##### Typescript: deprecated "moduleResolution": `"node"` or `"node10"`
+##### TypeScript: deprecated "moduleResolution": `"node"` or `"node10"`
 
-Since `"node"` and `"node10"` do not support `package.json` `"exports"` fields, having these values in your `tsconfig.json` will not work. Instead, use `"bundler"`, `"node16"` or `"nodenext"` values. For more information, see [Typescript's documentation](https://www.typescriptlang.org/tsconfig/#moduleResolution).
+Since `"node"` and `"node10"` do not support `package.json` `"exports"` fields, having these values in your `tsconfig.json` will not work. Instead, use `"bundler"`, `"node16"` or `"nodenext"` values. For more information, see [TypeScript's documentation](https://www.typescriptlang.org/tsconfig/#moduleResolution).
 
 ##### ESM strict resolution
 
@@ -243,7 +243,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Box select frame & children to allow resizing at the same time [#9031](https://github.com/excalidraw/excalidraw/pull/9031)
 
-- Allow installing libs from excal github [#9041](https://github.com/excalidraw/excalidraw/pull/9041)
+- Allow installing libs from excali github [#9041](https://github.com/excalidraw/excalidraw/pull/9041)
 
 - Update jotai [#9015](https://github.com/excalidraw/excalidraw/pull/9015)
 
@@ -441,7 +441,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Optimize frameToHighlight state change and snapLines state change [#8763](https://github.com/excalidraw/excalidraw/pull/8763)
 
-- Make some events expllicitly active to avoid console warnings [#8757](https://github.com/excalidraw/excalidraw/pull/8757)
+- Make some events explicitly active to avoid console warnings [#8757](https://github.com/excalidraw/excalidraw/pull/8757)
 
 - Unify binding update options for `updateBoundElements()` [#8832](https://github.com/excalidraw/excalidraw/pull/8832)
 
@@ -507,7 +507,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - Fixed copy to clipboard button [#8426](https://github.com/excalidraw/excalidraw/pull/8426)
 
-- Context menu does not work after after dragging on StatsDragInput [#8386](https://github.com/excalidraw/excalidraw/pull/8386)
+- Context menu does not work after dragging on StatsDragInput [#8386](https://github.com/excalidraw/excalidraw/pull/8386)
 
 - Perf regression in `getCommonBounds` [#8429](https://github.com/excalidraw/excalidraw/pull/8429)
 
@@ -637,7 +637,7 @@ The `updateScene` API has changed due to the added `Store` component, as part of
 
 - External link not opening [#7859](https://github.com/excalidraw/excalidraw/pull/7859)
 
-- Add safe check for arrow points length in tranformToExcalidrawElements [#7863](https://github.com/excalidraw/excalidraw/pull/7863)
+- Add safe check for arrow points length in transformToExcalidrawElements [#7863](https://github.com/excalidraw/excalidraw/pull/7863)
 
 - Import [#7869](https://github.com/excalidraw/excalidraw/pull/7869)
 
@@ -807,7 +807,7 @@ define: {
 
 ### Breaking Changes
 
-- The `Ref` support has been removed in v0.17.0 so if you are using refs, please update the integration to use the [`excalidrawAPI`](http://localhost:3003/docs/@excalidraw/excalidraw/api/props/excalidraw-api) [#7251](https://github.com/excalidraw/excalidraw/pull/7251).
+- The `Ref` support was removed in v0.17.0 so if you are using refs, please update the integration to use the [`excalidrawAPI`](http://localhost:3003/docs/@excalidraw/excalidraw/api/props/excalidraw-api) [#7251](https://github.com/excalidraw/excalidraw/pull/7251).
 
 - Additionally `ready` and `readyPromise` from the API have been discontinued. These APIs were found to be superfluous, and as part of the effort to streamline the APIs and maintain simplicity, they were removed in version v0.17.0 [#7251](https://github.com/excalidraw/excalidraw/pull/7251).
 
@@ -955,7 +955,7 @@ define: {
 
 ### Fixes
 
-- More eye-droper fixes [#7019](https://github.com/excalidraw/excalidraw/pull/7019)
+- More eye-dropper fixes [#7019](https://github.com/excalidraw/excalidraw/pull/7019)
 
 ### Refactor
 
@@ -965,7 +965,7 @@ define: {
 
 ## 0.16.0 (2023-09-19)
 
-- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
+- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programmatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
 - Introducing Web-Embeds (alias iframe element)[#6691](https://github.com/excalidraw/excalidraw/pull/6691)
 - Added [`props.validateEmbeddable`](https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/props#validateembeddable) to customize embeddable src url validation. [#6691](https://github.com/excalidraw/excalidraw/pull/6691)
 - Add support for `opts.fitToViewport` and `opts.viewportZoomFactor` in the [`ExcalidrawAPI.scrollToContent`](https://docs.excalidraw.com/docs/@excalidraw/excalidraw/api/props/excalidraw-api#scrolltocontent) API. [#6581](https://github.com/excalidraw/excalidraw/pull/6581).
@@ -999,7 +999,7 @@ define: {
 
 - Partition main canvas vertically [#6759](https://github.com/excalidraw/excalidraw/pull/6759)
 
-- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
+- Support creating containers, linear elements, text containers, labelled arrows and arrow bindings programmatically [#6546](https://github.com/excalidraw/excalidraw/pull/6546)
 
 - Add support for simplePDF in Web-Embeds [#6810](https://github.com/excalidraw/excalidraw/pull/6810)
 
@@ -1017,7 +1017,7 @@ define: {
 
 - Overwrite confirmation dialogs [#6658](https://github.com/excalidraw/excalidraw/pull/6658)
 
-- Simple analitycs [#6683](https://github.com/excalidraw/excalidraw/pull/6683)
+- Simple analytics [#6683](https://github.com/excalidraw/excalidraw/pull/6683)
 
 - Introduce frames [#6123](https://github.com/excalidraw/excalidraw/pull/6123)
 
@@ -1305,7 +1305,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Center align text when wrapped in container via context menu [#6480](https://github.com/excalidraw/excalidraw/pull/6480)
 
-- Restore original container height when unbinding text which was binded via context menu [#6444](https://github.com/excalidraw/excalidraw/pull/6444)
+- Restore original container height when unbinding text which was bound via context menu [#6444](https://github.com/excalidraw/excalidraw/pull/6444)
 
 - Mark more props as optional for element [#6448](https://github.com/excalidraw/excalidraw/pull/6448)
 
@@ -1325,7 +1325,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Center align text when bind to container via context menu [#6451](https://github.com/excalidraw/excalidraw/pull/6451)
 
-- Update coords when text unbinded from its container [#6445](https://github.com/excalidraw/excalidraw/pull/6445)
+- Update coords when text unbound from its container [#6445](https://github.com/excalidraw/excalidraw/pull/6445)
 
 - Autoredirect to plus in prod only [#6446](https://github.com/excalidraw/excalidraw/pull/6446)
 
@@ -1476,7 +1476,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Support customization for the editor [welcome screen](https://github.com/excalidraw/excalidraw/blob/master/src/packages/excalidraw/README.md#WelcomeScreen) [#6048](https://github.com/excalidraw/excalidraw/pull/6048).
 
-- Expose component API for the Excalidraw main menu [#6034](https://github.com/excalidraw/excalidraw/pull/6034), You can read more about its usage [here](https://github.com/excalidraw/excalidraw/blob/master/src/packages/excalidraw/README.md#MainMenu)
+- Expose [component API for the Excalidraw main menu](https://github.com/excalidraw/excalidraw/blob/master/src/packages/excalidraw/README.md#MainMenu) [#6034](https://github.com/excalidraw/excalidraw/pull/6034)
 
 - Support customization for the Excalidraw [main menu](https://github.com/excalidraw/excalidraw/blob/master/src/packages/excalidraw/README.md#MainMenu) [#6034](https://github.com/excalidraw/excalidraw/pull/6034).
 
@@ -1551,7 +1551,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Remove ga from docker build [#6059](https://github.com/excalidraw/excalidraw/pull/6059)
 
-- Use displayName since name gets stripped off when uglifying/minifiyng in production [#6036](https://github.com/excalidraw/excalidraw/pull/6036)
+- Use displayName since name gets stripped off when uglifying/minifying in production [#6036](https://github.com/excalidraw/excalidraw/pull/6036)
 
 - Remove background from wysiwyg when editing arrow label [#6033](https://github.com/excalidraw/excalidraw/pull/6033)
 
@@ -1633,7 +1633,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Hide canvas-modifying UI in view mode [#5815](https://github.com/excalidraw/excalidraw/pull/5815)
 
-- Fix vertical/horizntal centering icons [#5812](https://github.com/excalidraw/excalidraw/pull/5812)
+- Fix vertical/horizontal centering icons [#5812](https://github.com/excalidraw/excalidraw/pull/5812)
 
 - Consistent use of ZOOM_STEP [#5801](https://github.com/excalidraw/excalidraw/pull/5801)
 
@@ -1683,7 +1683,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Enter and Exit line editor via context menu [#5719](https://github.com/excalidraw/excalidraw/pull/5719)
 
-- Further reduce darkmode init flash [#5701](https://github.com/excalidraw/excalidraw/pull/5701)
+- Further reduce dark mode init flash [#5701](https://github.com/excalidraw/excalidraw/pull/5701)
 
 - Support segment midpoints in line editor [#5641](https://github.com/excalidraw/excalidraw/pull/5641)
 
@@ -1817,7 +1817,7 @@ For more details refer to the [docs](https://docs.excalidraw.com)
 
 - Disable render throttling by default & during resize [#5451](https://github.com/excalidraw/excalidraw/pull/5451)
 
-- Attach wheel event to exscalidraw container only [#5443](https://github.com/excalidraw/excalidraw/pull/5443)
+- Attach wheel event to excalidraw container only [#5443](https://github.com/excalidraw/excalidraw/pull/5443)
 
 - Show toast when browser zoom is not 100% [#5304](https://github.com/excalidraw/excalidraw/pull/5304)
 
@@ -2076,7 +2076,7 @@ Check out the [release notes](https://github.com/excalidraw/excalidraw/releases/
 ### Features
 
 - Set the target to `window.name` if present during excalidraw libraries installation so it opens in same tab for the host. If `window.name` is not set it will open in a new tab [#3299](https://github.com/excalidraw/excalidraw/pull/3299).
-- Add `name` prop to indicate the name of the drawing which will be used when exporting the drawing. When supplied, the value takes precedence over `intialData.appState.name`, the `name` will be fully controlled by host app and the users won't be able to edit from within Excalidraw [#3273](https://github.com/excalidraw/excalidraw/pull/3273).
+- Add `name` prop to indicate the name of the drawing which will be used when exporting the drawing. When supplied, the value takes precedence over `initialData.appState.name`, the `name` will be fully controlled by host app and the users won't be able to edit from within Excalidraw [#3273](https://github.com/excalidraw/excalidraw/pull/3273).
 - Export API `setCanvasOffsets` via `ref` to set the offsets for Excalidraw[#3265](https://github.com/excalidraw/excalidraw/pull/3265).
   #### BREAKING CHANGE
   - `offsetLeft` and `offsetTop` props have been removed now so you have to use the `setCanvasOffsets` via `ref` to achieve the same.

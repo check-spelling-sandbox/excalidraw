@@ -341,11 +341,11 @@ describe("rectangle", () => {
 
   it("flips a rotated rectangle vertically correctly", async () => {
     const originalAngle = (3 * Math.PI) / 4;
-    const expectedAgnle = (5 * Math.PI) / 4;
+    const expectedAngle = (5 * Math.PI) / 4;
 
     createAndSelectOneRectangle(originalAngle);
 
-    await checkRotatedVerticalFlip(expectedAgnle);
+    await checkRotatedVerticalFlip(expectedAngle);
   });
 });
 
@@ -800,7 +800,7 @@ describe("image", () => {
     expect(h.elements[0].angle).toBeCloseTo(0);
   });
 
-  it("flips an rotated image horizontally correctly", async () => {
+  it("flips a rotated image horizontally correctly", async () => {
     const originalAngle = (Math.PI / 4) as Radians;
     const expectedAngle = ((7 * Math.PI) / 4) as Radians;
     //paste image
@@ -818,7 +818,7 @@ describe("image", () => {
     expect((h.elements[0] as ExcalidrawImageElement).scale).toEqual([-1, 1]);
   });
 
-  it("flips an rotated image vertically correctly", async () => {
+  it("flips a rotated image vertically correctly", async () => {
     const originalAngle = (Math.PI / 4) as Radians;
     const expectedAngle = ((7 * Math.PI) / 4) as Radians;
     //paste image
@@ -855,7 +855,7 @@ describe("image", () => {
   });
 });
 
-describe("mutliple elements", () => {
+describe("multiple elements", () => {
   it("with bound text flip correctly", async () => {
     UI.clickTool("arrow");
     fireEvent.click(screen.getByTitle("Architect"));

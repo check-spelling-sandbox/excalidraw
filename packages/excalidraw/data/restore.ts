@@ -458,7 +458,7 @@ export const restoreElement = (
         name: element.name ?? null,
       });
 
-    // Don't use default case so as to catch a missing an element type case.
+    // Don't use default case so as to catch a missing element type case.
     // We also don't want to throw, but instead return void so we filter
     // out these unsupported elements from the restored array.
   }
@@ -516,7 +516,7 @@ const repairContainerElement = (
 
 /**
  * Repairs target bound element's container's boundElements array,
- * or removes contaienrId if container does not exist.
+ * or removes containerId if container does not exist.
  *
  * NOTE mutates elements.
  */
@@ -555,7 +555,7 @@ const repairBoundElement = (
 };
 
 /**
- * Remove an element's frameId if its containing frame is non-existent
+ * Remove an element's frameId if its containing frame is nonexistent
  *
  * NOTE mutates elements.
  */

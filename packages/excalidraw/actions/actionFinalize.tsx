@@ -280,7 +280,7 @@ export const actionFinalize = register<FormData>({
 
     let selectedLinearElement =
       element && isLinearElement(element)
-        ? new LinearElementEditor(element, arrayToMap(newElements)) // To select the linear element when user has finished mutipoint editing
+        ? new LinearElementEditor(element, arrayToMap(newElements)) // To select the linear element when user has finished multipoint editing
         : appState.selectedLinearElement;
 
     selectedLinearElement = selectedLinearElement
@@ -327,7 +327,7 @@ export const actionFinalize = register<FormData>({
 
         selectedLinearElement,
       },
-      // TODO: #7348 we should not capture everything, but if we don't, it leads to incosistencies -> revisit
+      // TODO: #7348 we should not capture everything, but if we don't, it leads to inconsistencies -> revisit
       captureUpdate: CaptureUpdateAction.IMMEDIATELY,
     };
   },

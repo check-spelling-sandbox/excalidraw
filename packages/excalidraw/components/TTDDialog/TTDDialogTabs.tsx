@@ -23,7 +23,7 @@ const TTDDialogTabs = (
       className="ttd-dialog-tabs-root"
       value={props.tab}
       onValueChange={(
-        // at least in test enviros, `tab` can be `undefined`
+        // at least in test enviroments, `tab` can be `undefined`
         tab: string | undefined,
       ) => {
         if (!tab) {

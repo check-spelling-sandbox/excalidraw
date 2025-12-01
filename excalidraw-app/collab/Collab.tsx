@@ -199,7 +199,7 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     this.idleTimeoutId = null;
   }
 
-  private onUmmount: (() => void) | null = null;
+  private onUnmount: (() => void) | null = null;
 
   componentDidMount() {
     window.addEventListener(EVENT.BEFORE_UNLOAD, this.beforeUnload);
@@ -216,7 +216,7 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     const unsubOnScrollChange = this.excalidrawAPI.onScrollChange(() =>
       throttledRelayUserViewportBounds(),
     );
-    this.onUmmount = () => {
+    this.onUnmount = () => {
       unsubOnUserFollow();
       unsubOnScrollChange();
     };
@@ -271,7 +271,7 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       window.clearTimeout(this.idleTimeoutId);
       this.idleTimeoutId = null;
     }
-    this.onUmmount?.();
+    this.onUnmount?.();
   }
 
   isCollaborating = () => appJotaiStore.get(isCollaboratingAtom)!;
@@ -753,8 +753,8 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       appState,
     );
 
-    // Avoid broadcasting to the rest of the collaborators the scene
-    // we just received!
+    // Avoid broadcasting the scene we just received to the rest of
+    // the collaborators!
     // Note: this needs to be set before updating the scene as it
     // synchronously calls render.
     this.setLastBroadcastedOrReceivedSceneVersion(

@@ -971,7 +971,7 @@ describe("regression tests", () => {
   );
 
   it(
-    "given a selected element A and a not selected element B with higher z-index than A " +
+    "given a selected element A and an unselected element B with higher z-index than A " +
       "and given B partially overlaps A " +
       "when there's a shift-click on the overlapped section B is added to the selection",
     () => {
@@ -984,7 +984,7 @@ describe("regression tests", () => {
       mouse.up(1000, 1000);
 
       // draw ellipse partially over rectangle.
-      // since ellipse was created after rectangle it has an higher z-index.
+      // since ellipse was created after rectangle it has a higher z-index.
       // we don't need to change background color again since change above
       // affects next drawn elements.
       UI.clickTool("ellipse");

@@ -482,7 +482,7 @@ const RE_RTL_CHECK = new RegExp(`^[^${RS_LTR_CHARS}]*[${RS_RTL_CHARS}]`);
  */
 export const isRTL = (text: string) => RE_RTL_CHECK.test(text);
 
-export const tupleToCoors = (
+export const tupleToCoords = (
   xyTuple: readonly [number, number],
 ): { x: number; y: number } => {
   const [x, y] = xyTuple;
@@ -670,7 +670,7 @@ export const getUpdatedTimestamp = () => (isTestEnv() ? 1 : Date.now());
 
 /**
  * Transforms array of objects containing `id` attribute,
- * or array of ids (strings), into a Map, keyd by `id`.
+ * or array of ids (strings), into a Map, keyed by `id`.
  */
 export const arrayToMap = <T extends { id: string } | string>(
   items: readonly T[] | Map<string, T>,
@@ -1181,7 +1181,7 @@ type Unbrand<T> = T extends Map<infer E, infer F>
 
 /**
  * Makes type into a branded type, ensuring that value is assignable to
- * the base ubranded type. Optionally you can explicitly supply current value
+ * the base unbranded type. Optionally you can explicitly supply current value
  * type to combine both (useful for composite branded types. Make sure you
  * compose branded types which are not composite themselves.)
  */

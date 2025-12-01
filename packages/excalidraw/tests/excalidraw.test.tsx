@@ -131,7 +131,7 @@ describe("<Excalidraw/>", () => {
 
   describe("Test UIOptions prop", () => {
     describe("Test canvasActions", () => {
-      it('should render menu with default items when "UIOPtions" is "undefined"', async () => {
+      it('should render menu with default items when "UIOptions" is "undefined"', async () => {
         const { container } = await render(
           <Excalidraw UIOptions={undefined} />,
         );
@@ -359,7 +359,7 @@ describe("<Excalidraw/>", () => {
             <MainMenu.Item onSelect={() => window.alert("Clicked")}>
               Click me
             </MainMenu.Item>
-            <MainMenu.ItemLink href="blog.excalidaw.com">
+            <MainMenu.ItemLink href="blog.excalidraw.com">
               Excalidraw blog
             </MainMenu.ItemLink>
             <MainMenu.ItemCustom>

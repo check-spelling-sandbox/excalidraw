@@ -86,7 +86,7 @@ export const KEYS = {
 
 export type Key = keyof typeof KEYS;
 
-// defines key code mapping for matching codes as fallback to respective keys on non-latin keyboard layouts
+// defines key code mapping for matching codes as fall back to respective keys on non-latin keyboard layouts
 export const KeyCodeMap = new Map<ValueOf<typeof KEYS>, ValueOf<typeof CODES>>([
   [KEYS.Z, CODES.Z],
   [KEYS.Y, CODES.Y],
@@ -98,7 +98,7 @@ export const isLatinChar = (key: string) => /^[a-z]$/.test(key.toLowerCase());
  * Used to match key events for any keyboard layout, especially on Windows and Linux,
  * where non-latin character with modified (CMD) is not substituted with latin-based alternative.
  *
- * Uses `event.key` when it's latin, otherwise fallbacks to `event.code` (if mapping exists).
+ * Uses `event.key` when it's latin; otherwise, fallbacks to `event.code` (if mapping exists).
  *
  * Example of pressing "z" on different layouts, with the chosen key or code highlighted in []:
  *
@@ -114,7 +114,7 @@ export const isLatinChar = (key: string) => /^[a-z]$/.test(key.toLowerCase());
  * Greek                 | [KeyZ] |  ζ  | z with cmd; also ζ is Greek equivalent of z
  * Hebrew                | [KeyZ] |  ז  | z with cmd; also ז is Hebrew equivalent of z
  * Pinyin - Simplified   |  KeyZ  | [z] | due to IME
- * Cangije - Traditional | [KeyZ] |  重 | z with cmd
+ * Cangjie - Traditional | [KeyZ] |  重 | z with cmd
  * Japanese              | [KeyZ] |  つ | z with cmd
  * 2-Set Korean          | [KeyZ] |  ㅋ | z with cmd
  *
@@ -129,7 +129,7 @@ export const matchKey = (
     return true;
   }
 
-  // non-latin layouts fallback to code
+  // non-latin layouts fall back to code
   const code = KeyCodeMap.get(key);
   return Boolean(code && !isLatinChar(event.key) && event.code === code);
 };

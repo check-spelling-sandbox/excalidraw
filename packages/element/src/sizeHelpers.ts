@@ -169,7 +169,7 @@ export const getLockedLinearCursorAlignSize = (
 
   if (customAngle) {
     // If custom angle is provided, we check if the angle is close to the
-    // custom angle, snap to that if close engough, otherwise snap to the
+    // custom angle, snap to that if close enough; otherwise, snap to the
     // higher or lower angle depending on the current angle vs custom angle.
     const lower = (Math.floor(customAngle / SHIFT_LOCKING_ANGLE) *
       SHIFT_LOCKING_ANGLE) as Radians;

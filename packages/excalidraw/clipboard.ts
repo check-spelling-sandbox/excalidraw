@@ -277,7 +277,7 @@ export const readSystemClipboard = async () => {
     try {
       if (navigator.clipboard?.readText) {
         console.warn(
-          `navigator.clipboard.readText() failed (${error.message}). Failling back to navigator.clipboard.read()`,
+          `navigator.clipboard.readText() failed (${error.message}). Falling back to navigator.clipboard.read()`,
         );
         const readText = await navigator.clipboard?.readText();
         if (readText) {
@@ -288,7 +288,7 @@ export const readSystemClipboard = async () => {
       // @ts-ignore
       if (navigator.clipboard?.read) {
         console.warn(
-          `navigator.clipboard.readText() failed (${error.message}). Failling back to navigator.clipboard.read()`,
+          `navigator.clipboard.readText() failed (${error.message}). Falling back to navigator.clipboard.read()`,
         );
       } else {
         if (error.name === "DataError") {
@@ -341,7 +341,7 @@ export const readSystemClipboard = async () => {
  * Parses "paste" ClipboardEvent.
  */
 const parseClipboardEventTextData = async (
-  dataList: ParsedDataTranferList,
+  dataList: ParsedDataTransferList,
   isPlainPaste = false,
 ): Promise<ParsedClipboardEventTextData> => {
   try {
@@ -402,7 +402,7 @@ export type ParsedDataTransferFile = Extract<
   { kind: "file" }
 >;
 
-type ParsedDataTranferList = ParsedDataTransferItem[] & {
+type ParsedDataTransferList = ParsedDataTransferItem[] & {
   /**
    * Only allows filtering by known `string` data types, since `file`
    * types can have multiple items of the same type (e.g. multiple image files)
@@ -420,7 +420,7 @@ type ParsedDataTranferList = ParsedDataTransferItem[] & {
 
 const findDataTransferItemType = function <
   T extends ValueOf<typeof STRING_MIME_TYPES>,
->(this: ParsedDataTranferList, type: T): ParsedDataTransferItemType<T> | null {
+>(this: ParsedDataTransferList, type: T): ParsedDataTransferItemType<T> | null {
   return (
     this.find(
       (item): item is ParsedDataTransferItemType<T> => item.type === type,
@@ -430,7 +430,7 @@ const findDataTransferItemType = function <
 const getDataTransferItemData = function <
   T extends ValueOf<typeof STRING_MIME_TYPES>,
 >(
-  this: ParsedDataTranferList,
+  this: ParsedDataTransferList,
   type: T,
 ):
   | ParsedDataTransferItemType<ValueOf<typeof STRING_MIME_TYPES>>["value"]
@@ -446,7 +446,7 @@ const getDataTransferItemData = function <
 };
 
 const getDataTransferFiles = function (
-  this: ParsedDataTranferList,
+  this: ParsedDataTransferList,
 ): ParsedDataTransferFile[] {
   return this.filter(
     (item): item is ParsedDataTransferFile => item.kind === "file",
@@ -455,7 +455,7 @@ const getDataTransferFiles = function (
 
 export const parseDataTransferEvent = async (
   event: ClipboardEvent | DragEvent | React.DragEvent<HTMLDivElement>,
-): Promise<ParsedDataTranferList> => {
+): Promise<ParsedDataTransferList> => {
   let items: DataTransferItemList | undefined = undefined;
 
   if (isClipboardEvent(event)) {
@@ -511,7 +511,7 @@ export const parseDataTransferEvent = async (
  * Attempts to parse clipboard event.
  */
 export const parseClipboard = async (
-  dataList: ParsedDataTranferList,
+  dataList: ParsedDataTransferList,
   isPlainPaste = false,
 ): Promise<ClipboardData> => {
   const parsedEventData = await parseClipboardEventTextData(
@@ -566,7 +566,7 @@ export const copyBlobToClipboardAsPng = async (blob: Blob | Promise<Blob>) => {
     //
     // Note that Firefox (and potentially others) seems to support Promise
     // ClipboardItem constructor, but throws on an unrelated MIME type error.
-    // So we need to await this and fallback to awaiting the blob if applicable.
+    // So we need to await this and fall back to awaiting the blob if applicable.
     await navigator.clipboard.write([
       new window.ClipboardItem({
         [MIME_TYPES.png]: blob,

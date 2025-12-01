@@ -248,7 +248,7 @@
     "cannotExportEmptyCanvas": "Cannot export empty canvas.",
     "couldNotCopyToClipboard": "Couldn't copy to clipboard.",
     "decryptFailed": "Couldn't decrypt data.",
-    "uploadedSecurly": "The upload has been secured with end-to-end encryption, which means that Excalidraw server and third parties can't read the content.",
+    "uploadedSecurely": "The upload has been secured with end-to-end encryption, which means that Excalidraw server and third parties can't read the content.",
     "loadSceneOverridePrompt": "Loading external drawing will replace your existing content. Do you wish to continue?",
     "collabStopOverridePrompt": "Stopping the session will overwrite your previous, locally stored drawing. Are you sure?\n\n(If you want to keep your local drawing, simply close the browser tab instead.)",
     "errorAddingToLibrary": "Couldn't add item to the library",
@@ -258,7 +258,7 @@
     "cannotRestoreFromImage": "Scene couldn't be restored from this image file",
     "invalidSceneUrl": "Couldn't import scene from the supplied URL. It's either malformed, or doesn't contain valid Excalidraw JSON data.",
     "resetLibrary": "This will clear your library. Are you sure?",
-    "removeItemsFromsLibrary": "Delete {{count}} item(s) from library?",
+    "removeItemsFromLibrary": "Delete {{count}} item(s) from library?",
     "invalidEncryptionKey": "Encryption key must be of 22 characters. Live collaboration is disabled.",
     "collabOfflineWarning": "No internet connection available.\nYour changes will not be saved!",
     "localStorageQuotaExceeded": "Browser storage quota exceeded. Changes will not be saved."
@@ -467,12 +467,12 @@
     "noteGuidelines": "The library needs to be manually approved first. Please read the <link>guidelines</link> before submitting. You will need a GitHub account to communicate and make changes if requested, but it is not strictly required.",
     "noteLicense": "By submitting, you agree the library will be published under the <link>MIT License</link>, which in short means anyone can use them without restrictions.",
     "noteItems": "Each library item must have its own name so it's filterable. The following library items will be included:",
-    "atleastOneLibItem": "Please select at least one library item to get started",
+    "atLeastOneLibItem": "Please select at least one library item to get started",
     "republishWarning": "Note: some of the selected items are marked as already published/submitted. You should only resubmit items when updating an existing library or submission."
   },
   "publishSuccessDialog": {
     "title": "Library submitted",
-    "content": "Thank you {{authorName}}. Your library has been submitted for review. You can track the status <link>here</link>"
+    "content": "Thank you {{authorName}}. Your <link>library has been submitted for review</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Reset library",

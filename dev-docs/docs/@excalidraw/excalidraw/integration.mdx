@@ -53,7 +53,7 @@ export default function App() {
 
 However the above component only works for named component exports. If you want to import some util / constant or something else apart from Excalidraw, then this approach will not work. Instead you can write a wrapper over Excalidraw and import the wrapper dynamically.
 
-If you are using `pages router` then importing the wrapper dynamically would work, where as if you are using `app router` then you will have to also add `useClient` directive on top of the file in addition to dynamically importing the wrapper as shown :point_down:
+If you are using `pages router` then importing the wrapper dynamically would work, whereas if you are using `app router` then you will have to also add `useClient` directive on top of the file in addition to dynamically importing the wrapper as shown :point_down:
 
 <Tabs>
   <TabItem value="Excalidraw Wrapper" label="Excalidraw Wrapper" >
@@ -87,7 +87,7 @@ If you are using `pages router` then importing the wrapper dynamically would wor
   ```jsx showLineNumbers
   import dynamic from "next/dynamic";
 
-  // Since client components get prerenderd on server as well hence importing
+  // Since client components get prerendered on server as well hence importing
   // the excalidraw stuff dynamically with ssr false
 
   const ExcalidrawWrapper = dynamic(
@@ -110,7 +110,7 @@ If you are using `pages router` then importing the wrapper dynamically would wor
   ```jsx showLineNumbers
   import dynamic from "next/dynamic";
 
-  // Since client components get prerenderd on server as well hence importing
+  // Since client components get prerendered on server as well hence importing
   // the excalidraw stuff dynamically with ssr false
 
   const ExcalidrawWrapper = dynamic(
@@ -131,7 +131,7 @@ If you are using `pages router` then importing the wrapper dynamically would wor
 </Tabs>
 
 {/* Link  should be updated to point to the latest! */}
-Here is a [source code](https://github.com/excalidraw/excalidraw/tree/master/examples/with-nextjs) for the example with app and pages router. You you can try it out [here](https://excalidraw-package-example-with-nextjs.vercel.app/).
+Here is a [source code](https://github.com/excalidraw/excalidraw/tree/master/examples/with-nextjs) for the example with app and pages router. You you can [try out the app](https://excalidraw-package-example-with-nextjs.vercel.app/).
 
 The `types` are available at `@excalidraw/excalidraw/types`, check [CodeSandbox](https://codesandbox.io/p/sandbox/github/excalidraw/excalidraw/tree/master/examples/with-script-in-browser) example for details.
 
@@ -204,7 +204,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="js" label="Javascript">
+<TabItem value="js" label="JavaScript">
 
 ```js showLineNumbers
 // See https://www.npmjs.com/package/@excalidraw/excalidraw documentation.
@@ -237,4 +237,4 @@ root.render(React.createElement(App));
 </TabItem>
 </Tabs>
 
-You can try it out [here](https://jsfiddle.net/vfn6dm14/3/).
+You can [try it out](https://jsfiddle.net/vfn6dm14/3/).

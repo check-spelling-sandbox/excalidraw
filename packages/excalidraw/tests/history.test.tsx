@@ -89,7 +89,7 @@ const checkpoint = (name: string) => {
     `[${name}] number of renders`,
   );
   // `scrolledOutside` does not appear to be stable between test runs
-  // `selectedLinearElemnt` includes `startBindingElement` containing seed and versionNonce
+  // `selectedLinearElement` includes `startBindingElement` containing seed and versionNonce
   const {
     name: _,
     scrolledOutside,
@@ -150,16 +150,16 @@ describe("history", () => {
 
       API.setElements([rect]);
 
-      const corrupedEntry = StoreDelta.create(
+      const corruptedEntry = StoreDelta.create(
         ElementsDelta.empty(),
         AppStateDelta.empty(),
       );
 
-      vi.spyOn(corrupedEntry.elements, "applyTo").mockImplementation(() => {
+      vi.spyOn(corruptedEntry.elements, "applyTo").mockImplementation(() => {
         throw new Error("Oh no, I am corrupted!");
       });
 
-      (h.history as any).undoStack.push(corrupedEntry);
+      (h.history as any).undoStack.push(corruptedEntry);
 
       const appState = getDefaultAppState() as AppState;
 
@@ -409,7 +409,7 @@ describe("history", () => {
       Keyboard.undo();
       expect(API.getUndoStack().length).toBe(1);
       expect(API.getRedoStack().length).toBe(3);
-      assertSelectedElements(rect); // get's reselected with out pushed entry!
+      assertSelectedElements(rect); // get's reselected without pushed entry!
       expect(h.elements).toEqual([
         expect.objectContaining({ id: rect.id, backgroundColor: transparent }),
       ]);
@@ -2375,7 +2375,7 @@ describe("history", () => {
       ]);
     });
 
-    // TODO: #7348 ideally we should not override, but since the order of groupIds matters, right now we cannot ensure that with postprocssed groupIds the order will be consistent after series or undos/redos, we don't postprocess them at all
+    // TODO: #7348 ideally we should not override, but since the order of groupIds matters, right now we cannot ensure that with postprocessed groupIds the order will be consistent after series or undos/redos, we don't postprocess them at all
     //       in other words, if we would postprocess groupIds, the groupIds order on "redo" below would be ["B", "A"] instead of ["A", "B"]
     it("should override remotely added groups on undo, but restore them on redo", async () => {
       const rect1 = API.createElement({ type: "rectangle" });
@@ -2590,7 +2590,7 @@ describe("history", () => {
       ]);
     });
 
-    it("should iterate through the history when when element change relates to remotely deleted element", async () => {
+    it("should iterate through the history when element change relates to remotely deleted element", async () => {
       UI.createElement("rectangle", { x: 10 });
       togglePopover("Background");
       UI.clickOnTestId("color-red");
@@ -3983,7 +3983,7 @@ describe("history", () => {
           elements: [
             newElementWith(h.elements[0], {
               boundElements: [{ id: remoteText.id, type: "text" }],
-              isDeleted: false, // purposefully undeleting, mimicing concurrenct update
+              isDeleted: false, // purposefully undeleting, mimicking concurrent update
             }),
             h.elements[1],
             // rebinding the container with a new text element!
