@@ -26,7 +26,6 @@ export const fileOpen = async <M extends boolean | undefined = false>(opts: {
 
   const mimeTypes = opts.extensions?.reduce((mimeTypes, type) => {
     mimeTypes.push(MIME_TYPES[type]);
-
     return mimeTypes;
   }, [] as string[]);
 
